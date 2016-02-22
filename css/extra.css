@@ -1,0 +1,29 @@
+.Wds\(-0\.1em\) {
+  word-spacing: -0.1em;
+}
+
+.Link {
+  transition: all .3s cubic-bezier(0.19, 1, 0.22, 1);
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, currentColor 50%, currentColor 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 1.15em;
+}
+
+@media not all, only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .Link {
+    background-size: 1px 1px;
+  }
+}
+
+.Link:hover,
+.Link:focus {
+  opacity: .6;
+  background-image: linear-gradient(to bottom, transparent 50%, transparent 50%);
+  background-position: 0 1.25em;
+}
+
+.Link:active {
+  opacity: 1;
+}
