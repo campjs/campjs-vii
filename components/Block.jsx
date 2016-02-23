@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react'
 import Face from './Face'
-// import cx from 'classnames'
+import cx from 'classnames'
 
 const classes = {
   base: 'Trfs(p) Pos(a) B(0) L(0) Trs(eoel)'
@@ -32,11 +32,15 @@ const Block = ({
   hideAfterIntro,
   background = 'plain',
   currentSide = 0,
-  children
+  children,
+  introClasses
 }) => {
   const [width, height] = size
   return (
-    <div className={classes.base}
+    <div className={cx(
+        classes.base,
+        (currentSide === 0) && introClasses
+      )}
       style={{
         width: width + '%',
         height: height + '%',
@@ -91,7 +95,9 @@ Block.propTypes = {
    */
   background: PropTypes.string,
   // The current rotation of the main beam
-  currentSide: PropTypes.number.isRequired
+  currentSide: PropTypes.number.isRequired,
+  // Classes that are applied during the intro
+  introClasses: PropTypes.string
 }
 
 export default Block

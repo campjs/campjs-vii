@@ -118,6 +118,8 @@ module.exports = {
       aeol:  'all .7s cubic-bezier(0.19, 1, 0.22, 1)',
       aeib: 'all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045)',
       aeob: 'all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
+      // Animations
+      wave: '5s ease-in-out 0s alternate infinite wave',
       // Transforms
       // TranslateZ can't use percentages
       // So have to use a combination of X & Y

@@ -44,16 +44,17 @@ class Template extends Component {
       pages
     } = this.props
     const rotation = getRotation(state.path)
+    const home = (rotation === 0)
     const homeLinkClasses = cx(
       'D(b) Pos(r) Z(5) Mb(-8vh)',
-      (rotation === 0) ? 'H(48vh)' : 'H(58vh)'
+      home ? 'H(48vh)' : 'H(58vh)'
     )
     return (
       <div className={classes.root}>
         <Icons />
         <Nav rotation={rotation} />
         <div className={classes.atmosphere}>
-          <Link className={homeLinkClasses} to='/'>
+          <Link className={homeLinkClasses} to={home ? '/about/' : '/'}>
             <div className='Hidden'>Home</div>
           </Link>
           <Beam rotation={rotation}>
@@ -99,7 +100,7 @@ class Template extends Component {
               side={4}
               currentSide={rotation}>
               { !page.data &&
-                <BeamSideHeader intro={rotation === 0}>
+                <BeamSideHeader intro={home}>
                   <BeamHeading>News</BeamHeading>
                 </BeamSideHeader>
               }

@@ -27,3 +27,15 @@
 .Link:active {
   opacity: 1;
 }
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(-50.125%) translateY(600%) rotateX(90deg) translateY(-100%) rotateX(-90deg);
+  }
+  33% {
+    transform: translateX(-50.125%) translateY(900%) rotateX(90deg) translateY(-100%) rotateX(-89deg);
+  }
+  66% {
+    transform: translateX(-50.125%) translateY(400%) rotateX(88deg) translateY(-100%) rotateX(-90deg);
+  }
+}

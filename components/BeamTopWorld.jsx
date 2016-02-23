@@ -18,10 +18,11 @@ const BeamTopWorld = ({
       <div className={classes.scene}>
         <div className={classes.inner}>
           <Block size={[800, 1, 800]}
-            position={[-400, -10, -400]}
+            position={[-400, -5, -400]}
             currentSide={currentSide}
             postionAfterIntro={[-400, -100, -400]}
             hideAfterIntro
+            introClasses='Anim(wave)'
             background='water'/>
           <div title='CAMPJS'>
             {/* C */}
