@@ -40,6 +40,9 @@
 .Bgc\(\#000\) {
   background-color: #000;
 }
+.Bgc\(\#000\.4\) {
+  background-color: rgba(0,0,0,.4);
+}
 .Bgc\(dirt\) {
   background-color: #6a6271;
 }
@@ -63,9 +66,6 @@
 }
 .Bgc\(\#fdd600\) {
   background-color: #fdd600;
-}
-.Bgc\(\#000\.4\) {
-  background-color: rgba(0,0,0,.4);
 }
 .Bgc\(sky\) {
   background-color: #00abef;
@@ -178,11 +178,11 @@
 .H\(ms2\) {
   height: 1.44rem;
 }
-.H\(0\) {
-  height: 0;
-}
 .H\(100\%\) {
   height: 100%;
+}
+.H\(0\) {
+  height: 0;
 }
 .H\(rh\) {
   height: 0.75rem;
@@ -306,11 +306,11 @@
 .Op\(\.26\) {
   opacity: .26;
 }
-.Op\(\.75\) {
-  opacity: .75;
-}
 .Op\(\.6\) {
   opacity: .6;
+}
+.Op\(\.75\) {
+  opacity: .75;
 }
 .Op\(0\) {
   opacity: 0;
@@ -346,6 +346,10 @@
 .Px\(rh\) {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+.Py\(r3q\) {
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
 }
 .Py\(rh\), .Pt\(rh\) {
   padding-top: 0.75rem;
@@ -390,12 +394,6 @@
 .Tt\(u\) {
   text-transform: uppercase;
 }
-.Trf\(beamTopWorld\) {
-  transform: rotateY(-90deg) rotateY(-270deg);
-}
-.Trf\(beamTopScene\) {
-  transform: translateY(-50%) rotateX(-90deg) translateY(-50%);
-}
 .Trf\(faceTop\) {
   transform: rotateX(180deg) translateY(50%) RotateX(-90deg);
 }
@@ -407,6 +405,12 @@
 }
 .Trf\(blockBottom\) {
   transform: translateY(-50%) rotateX(90deg);
+}
+.Trf\(beamTopWorld\) {
+  transform: rotateY(-90deg) rotateY(-270deg);
+}
+.Trf\(beamTopScene\) {
+  transform: translateY(-50%) rotateX(-90deg) translateY(-50%);
 }
 .Trf\(faceFront\) {
   transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);

@@ -6,7 +6,7 @@ const classes = {
   root: 'Bgc(#000.25) Bgc(t)--sm D(f) Jc(c) Ai(c) Pos(a) W(100%) T(0) Z(10) Mx(a) Mt(r1)--sm List(n)',
   item: 'Px(rq)--sm Flxs(1) Flxg(1) Flxg(0)--sm',
   link: {
-    base: 'Ta(c) D(b) Py(rh) Px(rq) Py(rq)--sm Px(rh)--sm Td(n) Fz(msn2) Fw(700) Whs(nw) Fz(msn1)--sm Trs(aeol)',
+    base: 'Ta(c) D(b) Py(r3q) Px(rq) Py(rq)--sm Px(rh)--sm Td(n) Fz(msn2) Fw(700) Whs(nw) Fz(msn1)--sm Trs(aeol)',
     notActive: 'C(#fff) C(#000.8):h Bgc(#fff.9):h Op(.8) Op(1):h',
     active: 'Bgc(#fff) C(#000.8)',
     tickets: 'Bgc(grass) C(dirt) C(dirt):h Bgc(grass):h'
