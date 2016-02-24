@@ -19,5 +19,7 @@ npm run build
 To publish to github pages, run:
 
 ```
-npm run build
+npm run publish
 ```
+
+NOTE: `publish` includes the build step
