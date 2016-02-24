@@ -6,7 +6,16 @@ const classes = {
   base: 'Trfs(p) Pos(a) B(0) L(0) Trs(eoel)'
 }
 
-const calcCubePosition = (position, size) => {
+const calcRotation = (rotate) => {
+  const [x, y, z] = rotate
+  if (x === y === z) return 'rotate3d(1,1,1,' + x + 'deg)'
+  const rotateX = x ? 'rotateX(' + x + 'deg)' : ''
+  const rotateY = y ? 'rotateY(' + y + 'deg)' : ''
+  const rotateZ = z ? 'rotateZ(' + z + 'deg)' : ''
+  return [rotateX, rotateY, rotateZ].join('')
+}
+
+const calcCubePosition = (position, size, rotate) => {
   const [x, y, z] = position
   const [sizeX, sizeY, sizeZ] = size
   const zTranslateStart = ((sizeZ / sizeY) / 2) * 100
@@ -22,12 +31,14 @@ const calcCubePosition = (position, size) => {
     ? 'rotateX(90deg) translateY(' +
       zTranslateY + '%) rotateX(-90deg)'
     : ''
-  return [positonX, positonY, positonZ].join(' ')
+  var rotation = rotate ? calcRotation(rotate) : ''
+  return [positonX, positonY, positonZ, rotation].join(' ')
 }
 
 const Block = ({
   position = [1, 1, 1],
   size = [1, 1, 1],
+  rotate,
   postionAfterIntro,
   hideAfterIntro,
   background = 'plain',
@@ -46,8 +57,8 @@ const Block = ({
         height: height + '%',
         opacity: (currentSide !== 0) && hideAfterIntro ? 0 : 1,
         transform: ((currentSide !== 0) && postionAfterIntro)
-          ? calcCubePosition(postionAfterIntro, size)
-          : calcCubePosition(position, size)
+          ? calcCubePosition(postionAfterIntro, size, rotate)
+          : calcCubePosition(position, size, rotate)
       }}>
       <Face side={0}
         size={size}
@@ -84,6 +95,12 @@ Block.propTypes = {
    * Relative to the position
    */
   size: PropTypes.array,
+  /**
+   * Rotation of x, y or z
+   * Default is none
+   * Useful for putting block on an angle
+   */
+  rotate: PropTypes.array,
   /**
    * See the backgroun array in Face for options
    */

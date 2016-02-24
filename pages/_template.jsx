@@ -65,16 +65,22 @@ class Template extends Component {
   }
   goToPrevPage = () => {
     const currentRotation = getRotation(this.props.state.path)
-    const prevRotation = (currentRotation === 0 || currentRotation === 1)
-      ? 4 : currentRotation - 1
+    const prevRotation = (currentRotation === 0)
+      ? 1
+      : (currentRotation === 1)
+        ? 4
+        : currentRotation - 1
     const prevPath = navItems
       .find(item => item.id === prevRotation).path
     HistoryLocation.replace(prevPath)
   }
   goToNextPage = () => {
     const currentRotation = getRotation(this.props.state.path)
-    const nextRotation = (currentRotation === 0 || currentRotation === 4)
-      ? 1 : currentRotation + 1
+    const nextRotation = (currentRotation === 0)
+      ? 2
+      : (currentRotation === 4)
+        ? 1
+        : currentRotation + 1
     const nextPath = navItems
       .find(item => item.id === nextRotation).path
     HistoryLocation.replace(nextPath)

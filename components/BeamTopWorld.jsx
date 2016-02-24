@@ -117,13 +117,13 @@ const BeamTopWorld = ({
           {/* Signpost */}
           <Block size={[3, 8, 3]}
             position={[76, 1, 90]}
-            background='dirt'
+            background='wood'
             currentSide={currentSide} />
           <Block size={[38, 15, 5]}
             position={[59, 9, 89]}
             background='sand'
             currentSide={currentSide}>
-            <div className='Lts(-0.01em) P(re) P(rq)--sm W(100%) H(100%) Bds(s) Bgc(dirt) Bdw(re) Bdw(rq)--sm Bdc(sand)'>
+            <div className='Lts(-0.01em) P(re) P(rq)--sm W(100%) H(100%) Bds(s) Bgc(wood) Bdw(re) Bdw(rq)--sm Bdc(sand)'>
               <div className='H(100%) D(f) Ai(c) Jc(c) Fld(c) Ta(c) Fz(msn2) Fz(msn1)--osm Fz(ms0)--osmd Fz(ms1)--md'>
                 <div>3-6 June, 2016</div>
                 <div className='Fz(.75em) Op(.75)'>Broken Bay, Sydney</div>
@@ -221,6 +221,23 @@ const BeamTopWorld = ({
           <Block size={[5, 12, 5]}
             position={[69, 8, 14.5]}
             background='tree'
+            currentSide={currentSide} />
+          {/* Tents */}
+          <Block size={[12, 1, 10]}
+            position={[55, 4, 42]}
+            rotate={[0, 0, 55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[48, 4, 42]}
+            rotate={[0, 0, -55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[75, 4, 52]}
+            rotate={[0, 0, 55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[68, 4, 52]}
+            rotate={[0, 0, -55]}
             currentSide={currentSide} />
         </div>
       </div>

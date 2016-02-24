@@ -5,13 +5,13 @@ export const backgrounds = {
   dirt: 'Bgc(dirt)',
   grass: 'Bgc(grass)',
   water: 'Bgc(water)',
-  leaves: 'Bgc(#0a6)',
-  tree: 'Bgc(#91cc00)',
+  leaves: 'Bgc(leaves)',
+  tree: 'Bgc(tree)',
   plain: 'Bgc(#fff)',
   sand: 'Bgc(sand)',
-  wood: 'Bgc(#8f5250)',
-  fire: 'Bgc(#fd9700)',
-  fireTop: 'Bgc(#fdd600)'
+  wood: 'Bgc(wood)',
+  fire: 'Bgc(fire)',
+  fireTop: 'Bgc(fireTop)'
 }
 
 const classes = {
