@@ -51,29 +51,23 @@ const Block = ({
       }}>
       <Face side={0}
         size={size}
-        currentSide={currentSide}
         background={background} />
       <Face side={1}
         size={size}
-        currentSide={currentSide}
         background={background}>
         {children}
       </Face>
       <Face side={2}
         size={size}
-        currentSide={currentSide}
         background={background} />
       <Face side={3}
         size={size}
-        currentSide={currentSide}
         background={background} />
       <Face side={4}
         size={size}
-        currentSide={currentSide}
         background={background} />
       <Face side={5}
         size={size}
-        currentSide={currentSide}
         background={background} />
     </div>
   )

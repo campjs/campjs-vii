@@ -38,6 +38,6 @@ export default class News extends Component {
 }
 
 News.propTypes = {
-  pages: PropTypes.object,
+  pages: PropTypes.array,
   config: PropTypes.object
 }

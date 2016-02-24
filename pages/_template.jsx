@@ -43,14 +43,16 @@ const getRotation = (path) => {
 
 class Template extends Component {
   componentWillMount () {
-    combokeys.bindGlobal('esc', () => HistoryLocation.replace('/'))
-    combokeys.bindGlobal('up', this.goHomeIfAtTop)
-    combokeys.bindGlobal('left', this.goToPrevPage)
-    combokeys.bindGlobal('right', this.goToNextPage)
-    combokeys.bindGlobal('down', this.goToFirst)
+    if (typeof document !== 'undefined') {
+      combokeys.bindGlobal('esc', () => HistoryLocation.replace('/'))
+      combokeys.bindGlobal('up', this.goHomeIfAtTop)
+      combokeys.bindGlobal('left', this.goToPrevPage)
+      combokeys.bindGlobal('right', this.goToNextPage)
+      combokeys.bindGlobal('down', this.goToFirst)
+    }
   }
   goHomeIfAtTop = () => {
-    if (window && (window.pageYOffset === 0)) {
+    if (typeof window !== 'undefined' && (window.pageYOffset === 0)) {
       HistoryLocation.replace('/')
       return false
     }
@@ -90,7 +92,7 @@ class Template extends Component {
       home ? 'H(48vh)' : 'H(58vh)'
     )
     return (
-      <div className={classes.root}>
+      <div className={classes.root + ' Side-' + rotation + '--is-active'}>
         <Icons />
         <Nav rotation={rotation} />
         <div className={classes.atmosphere}>

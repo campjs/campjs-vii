@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
-import { Shader } from './'
 
 export const backgrounds = {
   dirt: 'Bgc(dirt)',
@@ -60,7 +59,6 @@ const Face = ({
   children,
   className,
   size,
-  currentSide = 0,
   side = 0
 }) => {
   const faceStyle = calcFaceStyle(side, size)
@@ -72,8 +70,8 @@ const Face = ({
   )
   return (
     <div className={stateClasses} style={faceStyle}>
-      {(side > 0 || side < 5) && (
-        <Shader side={side} currentSide={currentSide}/>
+      {(side > 0 && side < 5) && (
+        <div className={'Shader Shader-' + side} />
       )}
       {children}
     </div>
@@ -84,7 +82,6 @@ Face.propTypes = {
   background: PropTypes.oneOf(Object.keys(backgrounds)),
   className: PropTypes.string,
   children: PropTypes.any,
-  currentSide: PropTypes.oneOf([0, 1, 2, 3, 4, 5]).isRequired,
   side: PropTypes.oneOf([0, 1, 2, 3, 4, 5]).isRequired,
   size: PropTypes.array
 }

@@ -27,6 +27,33 @@
   opacity: 1;
 }
 
+.Shader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  pointer-events: none;
+  transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: .26;
+}
+
+.Side-0--is-active .Shader-1,
+.Side-1--is-active .Shader-4,
+.Side-2--is-active .Shader-1,
+.Side-3--is-active .Shader-2,
+.Side-4--is-active .Shader-3 {
+  opacity: .13;
+}
+
+.Side-1--is-active .Shader-1,
+.Side-2--is-active .Shader-2,
+.Side-3--is-active .Shader-3,
+.Side-4--is-active .Shader-4 {
+  opacity: .05;
+}
+
 @keyframes wave {
   0%, 100% {
     transform: translateX(-50.125%) translateY(600%) rotateX(90deg) translateY(-100%) rotateX(-90deg);

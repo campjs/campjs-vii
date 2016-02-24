@@ -22,6 +22,12 @@
 .Bgi\(grddarkt\) {
   background-image: linear-gradient(180deg,rgba(0,0,0,0.2),rgba(0,0,0,0) 60%);
 }
+.Bgc\(grass\) {
+  background-color: #bcce46;
+}
+.Bgc\(dirt\) {
+  background-color: #6a6271;
+}
 .Bgc\(\#000\.25\) {
   background-color: rgba(0,0,0,.25);
 }
@@ -31,20 +37,11 @@
 .Bgc\(\#fff\) {
   background-color: #fff;
 }
-.Bgc\(grass\) {
-  background-color: #bcce46;
-}
 .Bgc\(grass\)\:h:hover {
   background-color: #bcce46;
 }
-.Bgc\(\#000\) {
-  background-color: #000;
-}
 .Bgc\(\#000\.4\) {
   background-color: rgba(0,0,0,.4);
-}
-.Bgc\(dirt\) {
-  background-color: #6a6271;
 }
 .Bgc\(water\) {
   background-color: #5cd8ff;
@@ -106,14 +103,14 @@
 .D\(b\) {
   display: block;
 }
-.D\(n\) {
-  display: none;
-}
 .D\(ib\) {
   display: inline-block;
 }
 .D\(if\) {
   display: inline-flex;
+}
+.D\(n\) {
+  display: none;
 }
 .Flxg\(1\) {
   flex-grow: 1;
@@ -145,8 +142,14 @@
 .Fw\(800\) {
   font-weight: 800;
 }
+.Fz\(msn1\) {
+  font-size: 0.833rem;
+}
 .Fz\(msn2\) {
   font-size: 0.694rem;
+}
+.Fz\(\.75em\) {
+  font-size: .75em;
 }
 .Fz\(ms1\) {
   font-size: 1.2rem;
@@ -166,23 +169,17 @@
 .Fz\(ms6\) {
   font-size: 2.986rem;
 }
-.Fz\(msn1\) {
-  font-size: 0.833rem;
-}
-.Fz\(\.75em\) {
-  font-size: .75em;
-}
 .Fz\(ms0\) {
   font-size: 1rem;
 }
-.H\(ms2\) {
-  height: 1.44rem;
+.H\(0\) {
+  height: 0;
 }
 .H\(100\%\) {
   height: 100%;
 }
-.H\(0\) {
-  height: 0;
+.H\(ms2\) {
+  height: 1.44rem;
 }
 .H\(rh\) {
   height: 0.75rem;
@@ -291,29 +288,20 @@
 .Start\(100\%\) {
   left: 100%;
 }
+.Op\(\.75\) {
+  opacity: .75;
+}
 .Op\(\.8\) {
   opacity: .8;
 }
 .Op\(1\)\:h:hover {
   opacity: 1;
 }
-.Op\(\.05\) {
-  opacity: .05;
-}
-.Op\(\.13\) {
-  opacity: .13;
-}
-.Op\(\.26\) {
-  opacity: .26;
+.Op\(0\) {
+  opacity: 0;
 }
 .Op\(\.6\) {
   opacity: .6;
-}
-.Op\(\.75\) {
-  opacity: .75;
-}
-.Op\(0\) {
-  opacity: 0;
 }
 .Op\(\.7\) {
   opacity: .7;
@@ -321,11 +309,11 @@
 .Op\(1\)\! {
   opacity: 1 !important;
 }
-.Ov\(h\), .Hidden {
-  overflow: hidden;
-}
 .Ov\(v\) {
   overflow: visible;
+}
+.Ov\(h\), .Hidden {
+  overflow: hidden;
 }
 .P\(re\) {
   padding: 0.1875rem;
@@ -376,9 +364,6 @@
 .Pb\(r1h\) {
   padding-bottom: 2.25rem;
 }
-.Pe\(n\) {
-  pointer-events: none;
-}
 .Pos\(a\), .StretchedBox {
   position: absolute;
 }
@@ -394,35 +379,11 @@
 .Tt\(u\) {
   text-transform: uppercase;
 }
-.Trf\(faceTop\) {
-  transform: rotateX(180deg) translateY(50%) RotateX(-90deg);
-}
-.Trf\(blockRight\) {
-  transform: translateX(-50%) rotateY(90deg);
-}
-.Trf\(faceLeft\) {
-  transform: translateX(-50%) rotateY(-90deg);
-}
-.Trf\(blockBottom\) {
-  transform: translateY(-50%) rotateX(90deg);
-}
 .Trf\(beamTopWorld\) {
   transform: rotateY(-90deg) rotateY(-270deg);
 }
 .Trf\(beamTopScene\) {
   transform: translateY(-50%) rotateX(-90deg) translateY(-50%);
-}
-.Trf\(faceFront\) {
-  transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);
-}
-.Trf\(faceRight\) {
-  transform: translateX(50%) rotateY(90deg);
-}
-.Trf\(faceBack\) {
-  transform: rotateY(90deg) translateX(50%) rotateY(90deg);
-}
-.Trf\(faceBottom\) {
-  transform: rotateX(-180deg) translateY(-50%) rotateX(90deg);
 }
 .Trf\(beamTop\) {
   transform: rotateX(-20deg) rotateY(-45deg) scale3d(.7, .7, .7);
@@ -442,6 +403,30 @@
 .Trf\(beamBottom\) {
   transform: rotateX(20deg) rotateY(-45deg) scale3d(.7, .7, .7);
 }
+.Trf\(faceTop\) {
+  transform: rotateX(180deg) translateY(50%) RotateX(-90deg);
+}
+.Trf\(blockRight\) {
+  transform: translateX(-50%) rotateY(90deg);
+}
+.Trf\(faceLeft\) {
+  transform: translateX(-50%) rotateY(-90deg);
+}
+.Trf\(blockBottom\) {
+  transform: translateY(-50%) rotateX(90deg);
+}
+.Trf\(faceFront\) {
+  transform: rotateY(90deg) translateX(-50%) rotateY(-90deg);
+}
+.Trf\(faceRight\) {
+  transform: translateX(50%) rotateY(90deg);
+}
+.Trf\(faceBack\) {
+  transform: rotateY(90deg) translateX(50%) rotateY(90deg);
+}
+.Trf\(faceBottom\) {
+  transform: rotateX(-180deg) translateY(-50%) rotateX(90deg);
+}
 .Trfs\(p\) {
   transform-style: preserve-3d;
 }
@@ -457,14 +442,11 @@
 .Trs\(aeol\) {
   transition: all .7s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.Trs\(eo\) {
-  transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1);
+.Trs\(eol\) {
+  transition: transform .7s cubic-bezier(0.19, 1, 0.22, 1), opacity .6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .Trs\(eoel\) {
   transition: transform 1.4s cubic-bezier(0.19, 1, 0.22, 1), opacity .6s cubic-bezier(0.19, 1, 0.22, 1);
-}
-.Trs\(eol\) {
-  transition: transform .7s cubic-bezier(0.19, 1, 0.22, 1), opacity .6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 .Whs\(nw\) {
   white-space: nowrap;
@@ -475,20 +457,17 @@
 .W\(ms2\) {
   width: 1.44rem;
 }
-.W\(25\%\) {
-  width: 25%;
-}
 .W\(93vw\) {
   width: 93vw;
 }
 .W\(400\%\) {
   width: 400%;
 }
+.W\(25\%\) {
+  width: 25%;
+}
 .Z\(10\) {
   z-index: 10;
-}
-.Z\(-1\) {
-  z-index: -1;
 }
 .Z\(5\) {
   z-index: 5;
@@ -524,11 +503,11 @@
   .Flxg\(0\)--sm {
     flex-grow: 0;
   }
-  .Fz\(msn1\)--sm {
-    font-size: 0.833rem;
-  }
   .Fz\(ms1\)--sm {
     font-size: 1.2rem;
+  }
+  .Fz\(msn1\)--sm {
+    font-size: 0.833rem;
   }
   .Mt\(r1\)--sm {
     margin-top: 1.5rem;

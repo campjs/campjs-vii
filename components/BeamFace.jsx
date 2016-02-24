@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
 import { backgrounds } from './Face'
-import { Shader } from './'
 
 const classes = {
   base: ' C(#fff) Trfs(p) Trs(eol) W(25%) Bfv(h)',
@@ -19,7 +18,6 @@ const BeamFace = ({
   background = 'dirt',
   children,
   className,
-  currentSide = 0,
   side = 0
 }) => {
   const stateClasses = cx(
@@ -30,7 +28,9 @@ const BeamFace = ({
   )
   return (
     <div className={stateClasses}>
-      <Shader side={side} currentSide={currentSide}/>
+      {(side > 0 && side < 5) && (
+        <div className={'Shader Shader-' + side} />
+      )}
       {children}
     </div>
   )
@@ -41,9 +41,6 @@ BeamFace.propTypes = {
   children: PropTypes.any,
   shader: PropTypes.oneOf(['none', 'some', 'most']),
   side: PropTypes.oneOf([
-    0, 1, 2, 3, 4, 5
-  ]).isRequired,
-  currentSide: PropTypes.oneOf([
     0, 1, 2, 3, 4, 5
   ]).isRequired,
   background: PropTypes.oneOf(Object.keys(backgrounds))
