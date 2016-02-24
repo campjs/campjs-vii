@@ -1,0 +1,67 @@
+.Wds\(-0\.1em\) {
+  word-spacing: -0.1em;
+}
+
+.Link {
+  text-decoration: none;
+  background-image: linear-gradient(to bottom, currentColor 50%, currentColor 50%);
+  background-repeat: repeat-x;
+  background-size: 2px 2px;
+  background-position: 0 1.15em;
+}
+
+@media not all, only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .Link {
+    background-size: 1px 1px;
+  }
+}
+
+.Link:hover,
+.Link:focus {
+  opacity: .6;
+  background-image: linear-gradient(to bottom, transparent 50%, transparent 50%);
+  background-position: 0 1.25em;
+}
+
+.Link:active {
+  opacity: 1;
+}
+
+.Shader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  pointer-events: none;
+  transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1);
+  opacity: .26;
+}
+
+.Side-0--is-active .Shader-1,
+.Side-1--is-active .Shader-4,
+.Side-2--is-active .Shader-1,
+.Side-3--is-active .Shader-2,
+.Side-4--is-active .Shader-3 {
+  opacity: .13;
+}
+
+.Side-1--is-active .Shader-1,
+.Side-2--is-active .Shader-2,
+.Side-3--is-active .Shader-3,
+.Side-4--is-active .Shader-4 {
+  opacity: .05;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateX(-50.125%) translateY(600%) rotateX(90deg) translateY(-100%) rotateX(-90deg);
+  }
+  33% {
+    transform: translateX(-50.125%) translateY(900%) rotateX(90deg) translateY(-100%) rotateX(-89deg);
+  }
+  66% {
+    transform: translateX(-50.125%) translateY(400%) rotateX(88deg) translateY(-100%) rotateX(-90deg);
+  }
+}
