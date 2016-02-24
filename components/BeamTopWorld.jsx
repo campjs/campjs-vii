@@ -224,11 +224,11 @@ const BeamTopWorld = ({
             currentSide={currentSide} />
           {/* Tents */}
           <Block size={[12, 1, 10]}
-            position={[55, 4, 42]}
+            position={[55, 4, 38]}
             rotate={[0, 0, 55]}
             currentSide={currentSide} />
           <Block size={[12, 1, 10]}
-            position={[48, 4, 42]}
+            position={[48, 4, 38]}
             rotate={[0, 0, -55]}
             currentSide={currentSide} />
           <Block size={[12, 1, 10]}
@@ -238,6 +238,31 @@ const BeamTopWorld = ({
           <Block size={[12, 1, 10]}
             position={[68, 4, 52]}
             rotate={[0, 0, -55]}
+            currentSide={currentSide} />
+          {/* Clouds */}
+          <Block size={[5, 10, 15]}
+            position={[-10, 43, 78]}
+            currentSide={currentSide} />
+          <Block size={[5, 10, 30]}
+            position={[-10, 35, 70]}
+            currentSide={currentSide} />
+          <Block size={[5, 5, 9]}
+            position={[-3, 35, 10]}
+            currentSide={currentSide} />
+          <Block size={[5, 8, 23]}
+            position={[-3, 28, 4]}
+            currentSide={currentSide} />
+          <Block size={[5, 5, 11]}
+            position={[65, 36, -40]}
+            currentSide={currentSide} />
+          <Block size={[5, 9, 27]}
+            position={[65, 28, -48]}
+            currentSide={currentSide} />
+          <Block size={[5, 4, 11]}
+            position={[130, 36, 80]}
+            currentSide={currentSide} />
+          <Block size={[5, 9, 20]}
+            position={[130, 28, 75]}
             currentSide={currentSide} />
         </div>
       </div>
