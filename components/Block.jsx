@@ -108,7 +108,11 @@ Block.propTypes = {
   // The current rotation of the main beam
   currentSide: PropTypes.number.isRequired,
   // Classes that are applied during the intro
-  introClasses: PropTypes.string
+  introClasses: PropTypes.string,
+  // A new position array for after the intro
+  postionAfterIntro: PropTypes.array,
+  // Will set it's opacity to 0 after intro if true
+  hideAfterIntro: PropTypes.bool
 }
 
 export default Block

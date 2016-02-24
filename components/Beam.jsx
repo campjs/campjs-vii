@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import cx from 'classnames'
 
 const classes = {
@@ -32,6 +32,12 @@ const Beam = ({
       </div>
     </div>
   )
+}
+
+Beam.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.any,
+  rotation: PropTypes.number
 }
 
 export default Beam

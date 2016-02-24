@@ -38,7 +38,7 @@ const classes = {
 const getRotation = (path) => {
   const newPath = path.indexOf('/news/') !== -1 ? '/news/' : path
   return navItems
-    .find(item => item.path === newPath).id || 0
+    .find((item) => item.path === newPath).id || 0
 }
 
 class Template extends Component {
@@ -71,7 +71,7 @@ class Template extends Component {
         ? 4
         : currentRotation - 1
     const prevPath = navItems
-      .find(item => item.id === prevRotation).path
+      .find((item) => item.id === prevRotation).path
     HistoryLocation.replace(prevPath)
   }
   goToNextPage = () => {
@@ -82,7 +82,7 @@ class Template extends Component {
         ? 1
         : currentRotation + 1
     const nextPath = navItems
-      .find(item => item.id === nextRotation).path
+      .find((item) => item.id === nextRotation).path
     HistoryLocation.replace(nextPath)
   }
   render () {
@@ -118,7 +118,7 @@ class Template extends Component {
                 currentPath={page.path}
                 {...{
                   ...this.props,
-                  page: pages.find(page =>
+                  page: pages.find((page) =>
                       page.requirePath === 'about/index.md')
                 }}/>
             </BeamFace>
@@ -129,7 +129,7 @@ class Template extends Component {
                 currentPath={page.path}
                 {...{
                   ...this.props,
-                  page: pages.find(page =>
+                  page: pages.find((page) =>
                     page.requirePath === 'schedule/index.md')
                 }}/>
             </BeamFace>
@@ -140,14 +140,14 @@ class Template extends Component {
                 currentPath={page.path}
                 {...{
                   ...this.props,
-                  page: pages.find(page =>
+                  page: pages.find((page) =>
                     page.requirePath === 'get-involved/index.md')
                 }}/>
             </BeamFace>
             <BeamFace
               side={4}
               currentSide={rotation}>
-              { !page.data &&
+              {!page.data &&
                 <BeamSideHeader intro={home}>
                   <BeamHeading>News</BeamHeading>
                 </BeamSideHeader>

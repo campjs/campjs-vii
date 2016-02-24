@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import { Link as RouterLink } from 'react-router'
 import { link } from 'gatsby-helpers'
 
@@ -16,6 +16,12 @@ const Link = ({
       {children}
     </RouterLink>
   )
+}
+
+Link.propTypes = {
+  children: PropTypes.any,
+  to: PropTypes.string,
+  href: PropTypes.string
 }
 
 export default Link

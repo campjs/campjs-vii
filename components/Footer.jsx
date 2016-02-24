@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import {
   Icon,
   Link
@@ -27,6 +27,11 @@ const Nav = ({
       </Link>
     </div>
   )
+}
+
+Nav.propTypes = {
+  rotation: PropTypes.number,
+  className: PropTypes.string
 }
 
 export default Nav

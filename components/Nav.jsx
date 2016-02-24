@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 import Link from './Link'
 import cx from 'classnames'
 
@@ -65,6 +65,11 @@ const Nav = ({
       })}
     </ul>
   )
+}
+
+Nav.propTypes = {
+  rotation: PropTypes.number,
+  className: PropTypes.string
 }
 
 export default Nav
