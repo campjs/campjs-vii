@@ -13,7 +13,7 @@ const classes = {
   }
 }
 
-const navItems = [
+export const navItems = [
   {
     id: 1,
     path: '/about/',

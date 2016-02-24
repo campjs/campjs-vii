@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { RouteHandler } from 'react-router'
+import { RouteHandler, HistoryLocation } from 'react-router'
 import cx from 'classnames'
 import Page from '../wrappers/md'
 import {
@@ -8,35 +8,75 @@ import {
   BeamTopWorld,
   BeamSideHeader,
   BeamHeading,
+  Icons,
   Footer,
   Link,
   Nav
 } from '../components'
-import Icons from '../components/Icons'
+import { navItems } from '../components/Nav'
 
 import '../css/fonts.css'
 import '../css/base.css'
 import '../css/atomic.css'
 import '../css/extra.css'
 
+let combokeys
+
+if (typeof document !== 'undefined') {
+  var Combokeys = require('combokeys')
+  var CombokeysGlobal = require('combokeys/plugins/global-bind')
+  var CombokeysBindDictionary = require('combokeys/plugins/bind-dictionary')
+  combokeys =
+    CombokeysBindDictionary(CombokeysGlobal(new Combokeys(document)))
+}
+
 const classes = {
-  root: 'D(f) Fld(c) Mih(100%)',
+  root: 'Mih(100%)',
   atmosphere: 'Pb(r6) Prso(prsoa) Prs(5000px) Ov(h)'
 }
 
 const getRotation = (path) => {
   const newPath = path.indexOf('/news/') !== -1 ? '/news/' : path
-  switch (newPath) {
-    case '/about/': return 1
-    case '/schedule/': return 2
-    case '/get-involved/': return 3
-    case '/news/': return 4
-    case '/':
-    default: return 0
-  }
+  return navItems
+    .find(item => item.path === newPath).id || 0
 }
 
 class Template extends Component {
+  componentWillMount () {
+    combokeys.bindGlobal('esc', () => HistoryLocation.replace('/'))
+    combokeys.bindGlobal('up', this.goHomeIfAtTop)
+    combokeys.bindGlobal('left', this.goToPrevPage)
+    combokeys.bindGlobal('right', this.goToNextPage)
+    combokeys.bindGlobal('down', this.goToFirst)
+  }
+  goHomeIfAtTop = () => {
+    if (window && (window.pageYOffset === 0)) {
+      HistoryLocation.replace('/')
+      return false
+    }
+  }
+  goToFirst = (e) => {
+    if (this.props.state.path === '/') {
+      HistoryLocation.replace(navItems[0].path)
+      return false
+    }
+  }
+  goToPrevPage = () => {
+    const currentRotation = getRotation(this.props.state.path)
+    const prevRotation = (currentRotation === 0 || currentRotation === 1)
+      ? 4 : currentRotation - 1
+    const prevPath = navItems
+      .find(item => item.id === prevRotation).path
+    HistoryLocation.replace(prevPath)
+  }
+  goToNextPage = () => {
+    const currentRotation = getRotation(this.props.state.path)
+    const nextRotation = (currentRotation === 0 || currentRotation === 4)
+      ? 1 : currentRotation + 1
+    const nextPath = navItems
+      .find(item => item.id === nextRotation).path
+    HistoryLocation.replace(nextPath)
+  }
   render () {
     const {
       state,
@@ -55,7 +95,7 @@ class Template extends Component {
         <Nav rotation={rotation} />
         <div className={classes.atmosphere}>
           <Link className={homeLinkClasses} to={home ? '/about/' : '/'}>
-            <div className='Hidden'>Home</div>
+            <div className='Hidden'>{home ? 'About' : 'Home'}</div>
           </Link>
           <Beam rotation={rotation}>
             <BeamFace side={0}

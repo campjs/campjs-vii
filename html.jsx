@@ -22,7 +22,7 @@ export default class Html extends React.Component {
         </title>
         <link rel='shortcut icon' href={favicon} />
       </head>
-      <body className='Miw(300px) M(0) Ff(mono) C(#fff.9) Lts(-0.003) Wds(-0.01)'>
+      <body className='Miw(300px) M(0) Ff(mono) C(#fff.9) Lts(-0.003em) Wds(-0.01em)'>
         <div id='react-mount' className='Bgc(sky) Bgi(grddarkt)' dangerouslySetInnerHTML={{__html: body}} />
         <script src={link('/bundle.js')} />
       </body>
