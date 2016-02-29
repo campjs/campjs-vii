@@ -242,27 +242,35 @@ const BeamTopWorld = ({
           {/* Clouds */}
           <Block size={[5, 10, 15]}
             position={[-10, 43, 78]}
+            introClasses='Anim(float)'
             currentSide={currentSide} />
           <Block size={[5, 10, 30]}
             position={[-10, 35, 70]}
+            introClasses='Anim(float)'
             currentSide={currentSide} />
           <Block size={[5, 5, 9]}
             position={[-3, 35, 10]}
+            introClasses='Anim(float2)'
             currentSide={currentSide} />
           <Block size={[5, 8, 23]}
             position={[-3, 28, 4]}
+            introClasses='Anim(float2)'
             currentSide={currentSide} />
           <Block size={[5, 5, 11]}
             position={[65, 36, -40]}
+            introClasses='Anim(float3)'
             currentSide={currentSide} />
           <Block size={[5, 9, 27]}
             position={[65, 28, -48]}
+            introClasses='Anim(float3)'
             currentSide={currentSide} />
           <Block size={[5, 4, 11]}
             position={[130, 36, 80]}
+            introClasses='Anim(float4)'
             currentSide={currentSide} />
           <Block size={[5, 9, 20]}
             position={[130, 28, 75]}
+            introClasses='Anim(float4)'
             currentSide={currentSide} />
         </div>
       </div>

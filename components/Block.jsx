@@ -44,12 +44,14 @@ const Block = ({
   background = 'plain',
   currentSide = 0,
   children,
-  introClasses
+  introClasses,
+  className
 }) => {
   const [width, height] = size
   return (
     <div className={cx(
         classes.base,
+        className,
         (currentSide === 0) && introClasses
       )}
       style={{
@@ -86,6 +88,7 @@ const Block = ({
 
 Block.propTypes = {
   children: PropTypes.any,
+  className: PropTypes.string,
   /**
    * Postion is based on x, y, z coordinates
    */
@@ -105,13 +108,21 @@ Block.propTypes = {
    * See the backgroun array in Face for options
    */
   background: PropTypes.string,
-  // The current rotation of the main beam
+  /**
+   * The current rotation of the main beam
+   */
   currentSide: PropTypes.number.isRequired,
-  // Classes that are applied during the intro
+  /**
+   * Classes that are applied during the intro
+   */
   introClasses: PropTypes.string,
-  // A new position array for after the intro
+  /**
+   * A new position array for after the intro
+   */
   postionAfterIntro: PropTypes.array,
-  // Will set it's opacity to 0 after intro if true
+  /**
+   * Will set it's opacity to 0 after intro if true
+   */
   hideAfterIntro: PropTypes.bool
 }
 
