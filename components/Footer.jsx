@@ -16,7 +16,7 @@ const Nav = ({
 }) => {
   return (
     <div className={classes.root}>
-      <Link to='/code-of-conduct/' className={classes.link}>
+      <Link to='/about/code-of-conduct/' className={classes.link}>
         Code of Conduct
       </Link>
       <Link href='http://twitter.com/campjsnews' className={classes.link}>

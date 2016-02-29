@@ -45,7 +45,7 @@ renderer.link = function (href, title, text) {
 
 renderer.list = function (body, ordered) {
   var type = ordered ? 'ol' : 'ul'
-  return '<' + type + ' class="Mb(r1) List(s)">\n' + body + '</' + type + '>\n'
+  return '<' + type + ' class="Mb(r1) Mstart(r1) List(s)">\n' + body + '</' + type + '>\n'
 }
 
 renderer.image = function (href, title, text) {

@@ -16,32 +16,31 @@ export default class Md extends Component {
   }
   render () {
     const {
-      page,
-      currentPath,
-      config
+      config,
+      page
     } = this.props
+    const newsPost = /\/news\//.test(page.path)
+    const aboutPost = /\/about\//.test(page.path)
+    const pageType = newsPost ? 'news' : 'about'
     const post = page.data
-    const intro = (currentPath === '/')
     const sectionTitle = this.getSectionTitle(post.date)
     return (
       <DocumentTitle title={`${post.title}${sectionTitle} | ${config.siteTitle}`}>
         <div className='markdown'>
-          <BeamSideHeader intro={intro}>
+          <BeamSideHeader>
             <BeamHeading>{post.title}</BeamHeading>
           </BeamSideHeader>
-          {post.date &&
-            <Link to='/news/' className='Tt(u) Fz(msn1) Bgc(#000.4) Op(.7) Op(1):h Px(r1) Py(rq) D(b)'>
-              &lt; Back to all news
+          {(newsPost || aboutPost) &&
+            <Link to={`/${pageType}/`}
+              className='Tt(u) Fz(msn1) Bgc(#000.4) Op(.7) Op(1):h Px(r1) Py(rq) D(b)'>
+              &lt; Back to all {pageType}
             </Link>
           }
           <div className='P(r1)'>
-            {post.date &&
+            {newsPost &&
               <p className='Mb(r1h) Op(.6) Fz(msn1) Tt(u)'>
                 {moment(post.date).format('MMMM D, YYYY')}
               </p>
-            }
-            {post.teaser &&
-              <p className='Fz(ms1) Mb(r1) Op(.6)'>{post.teaser}</p>
             }
             <div dangerouslySetInnerHTML={{__html: post.body}}/>
           </div>
@@ -54,5 +53,5 @@ export default class Md extends Component {
 Md.propTypes = {
   page: PropTypes.object,
   config: PropTypes.object,
-  currentPath: PropTypes.string
+  state: PropTypes.object
 }

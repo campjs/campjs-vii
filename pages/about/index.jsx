@@ -1,17 +1,17 @@
 import React, { Component, PropTypes } from 'react'
 import DocumentTitle from 'react-document-title'
 
-export default class News extends Component {
+export default class About extends Component {
   render () {
     const {
       config
     } = this.props
     return (
-      <DocumentTitle title={'News | ' + config.siteTitle} />
+      <DocumentTitle title={'About | ' + config.siteTitle} />
     )
   }
 }
 
-News.propTypes = {
+About.propTypes = {
   config: PropTypes.object
 }

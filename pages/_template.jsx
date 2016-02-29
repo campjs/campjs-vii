@@ -3,15 +3,15 @@ import { RouteHandler, HistoryLocation } from 'react-router'
 import cx from 'classnames'
 import Page from '../wrappers/md'
 import {
+  AboutIndex,
   Beam,
   BeamFace,
   BeamTopWorld,
-  BeamSideHeader,
-  BeamHeading,
   Icons,
   Footer,
   Link,
-  Nav
+  Nav,
+  NewsIndex
 } from '../components'
 import { navItems } from '../components/Nav'
 
@@ -32,11 +32,15 @@ if (typeof document !== 'undefined') {
 
 const classes = {
   root: 'Mih(100%)',
-  atmosphere: 'Pb(r6) Prso(prsoa) Prs(5000px) Ov(h)'
+  atmosphere: 'Pb(r8) Prso(prsoa) Prs(5000px) Ov(h)'
 }
 
 const getRotation = (path) => {
-  const newPath = path.indexOf('/news/') !== -1 ? '/news/' : path
+  const newPath = (path.indexOf('/news/') !== -1)
+    ? '/news/'
+    : (path.indexOf('/about/') !== -1)
+      ? '/about/'
+      : path
   return navItems
     .find((item) => item.path === newPath).id || 0
 }
@@ -114,13 +118,10 @@ class Template extends Component {
             <BeamFace
               side={1}
               currentSide={rotation}>
-              <Page
-                currentPath={page.path}
-                {...{
-                  ...this.props,
-                  page: pages.find((page) =>
-                      page.requirePath === 'about/index.md')
-                }}/>
+              {/\/about\/\w+/.test(state.path)
+                ? <RouteHandler {...this.props} />
+                : <AboutIndex pages={pages}/>
+              }
             </BeamFace>
             <BeamFace
               side={2}
@@ -147,12 +148,10 @@ class Template extends Component {
             <BeamFace
               side={4}
               currentSide={rotation}>
-              {!page.data &&
-                <BeamSideHeader intro={home}>
-                  <BeamHeading>News</BeamHeading>
-                </BeamSideHeader>
+              {/\/news\/\w+/.test(state.path)
+                ? <RouteHandler {...this.props} />
+                : <NewsIndex pages={pages}/>
               }
-              <RouteHandler {...this.props} />
             </BeamFace>
             <BeamFace
               side={5}
