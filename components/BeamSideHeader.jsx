@@ -1,6 +1,8 @@
 import React, { PropTypes } from 'react'
 import { backgrounds } from './Face'
 
+import { isNotFirefox } from '../utils'
+
 const classes = {
   grass: 'H(rh) ' + backgrounds.grass,
   sand: 'Py(rh) Px(r1) ' + backgrounds.sand,
@@ -15,7 +17,7 @@ const BeamSideHeader = ({
     <div>
       <div className={classes.grass} />
       <div className={classes.sand}>
-        <div className={classes.content}>
+        <div className={isNotFirefox && classes.content}>
           {children}
         </div>
       </div>

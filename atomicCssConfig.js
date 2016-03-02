@@ -126,10 +126,6 @@ module.exports = {
       aeob: 'all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
       // Animations
       wave: '5s ease-in-out 1s alternate infinite wave',
-      float: '15s ease-in-out 1s alternate infinite float',
-      float2: '25s ease-in-out .5s alternate infinite float2',
-      float3: '20s ease-in-out .25s alternate infinite float3',
-      float4: '15s ease-in-out .1s alternate infinite float4',
       // Transforms
       // TranslateZ can't use percentages
       // So have to use a combination of X & Y
@@ -170,7 +166,6 @@ module.exports = {
       'My(r1h)',
       'My(r2)',
       'Mstart(r1)',
-      'Bdstart(chunky)',
       'Fz(ms1)',
       'Op(.6)',
       'Ov(h)',

@@ -3,7 +3,8 @@ import Face from './Face'
 import cx from 'classnames'
 
 const classes = {
-  base: 'Trfs(p) Pe(n) Pos(a) B(0) L(0) Trs(eoel)'
+  base: 'Trfs(p) Pe(n) Pos(a) B(0) L(0) Trs(eoel)',
+  hide: 'Op(0)'
 }
 
 const calcRotation = (rotate) => {
@@ -51,13 +52,13 @@ const Block = ({
   return (
     <div className={cx(
         classes.base,
+        (currentSide !== 0) && hideAfterIntro && classes.hide,
         className,
         (currentSide === 0) && introClasses
       )}
       style={{
         width: width + '%',
         height: height + '%',
-        opacity: (currentSide !== 0) && hideAfterIntro ? 0 : 1,
         transform: ((currentSide !== 0) && postionAfterIntro)
           ? calcCubePosition(postionAfterIntro, size, rotate)
           : calcCubePosition(position, size, rotate)

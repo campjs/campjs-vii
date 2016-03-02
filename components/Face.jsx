@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
+import { isNotFirefox } from '../utils'
 
 export const backgrounds = {
   dirt: 'Bgc(dirt)',
@@ -15,7 +16,7 @@ export const backgrounds = {
 }
 
 const classes = {
-  base: 'Pos(a) Ov(h) Bfv(h) Ff(bit)',
+  base: 'Pos(a) Ov(h) Bfv(h) Trfs(p) Ff(bit)',
   side: [
     'Trf(faceTop) W(100%)',
     'StretchedBox D(f) Ai(c) Jc(c)',
@@ -70,7 +71,7 @@ const Face = ({
   )
   return (
     <div className={stateClasses} style={faceStyle}>
-      {(side > 0 && side < 5) && (
+      {(side > 0 && side < 5) && isNotFirefox && (
         <div className={'Shader Shader-' + side} />
       )}
       {children}
