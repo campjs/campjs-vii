@@ -8,24 +8,41 @@ import {
 } from '../components'
 
 export default class Md extends Component {
-  getSectionTitle (news) {
-    if (news) {
+  getSectionTitle (newsPost, aboutPost) {
+    if (newsPost) {
       return ' | News'
+    } else if (aboutPost) {
+      return ' | About'
     }
     return ''
+  }
+  getPageTitle (currentPath, postTitle) {
+    switch (currentPath) {
+      case '/about/': return 'About'
+      case '/schedule/': return 'Schedule'
+      case '/get-involved/': return 'Get Involved'
+      case '/news/': return 'News'
+      case '/': return false
+      default: return postTitle
+    }
   }
   render () {
     const {
       config,
+      currentPath,
       page
     } = this.props
     const newsPost = /\/news\//.test(page.path)
     const aboutPost = /\/about\//.test(page.path)
     const pageType = newsPost ? 'news' : 'about'
     const post = page.data
-    const sectionTitle = this.getSectionTitle(post.date)
+    const pageTitle = this.getPageTitle(currentPath, post.title)
+    const sectionTitle = this.getSectionTitle(newsPost, aboutPost)
+    const title = pageTitle
+      ? pageTitle + sectionTitle + ' | ' + config.siteTitle
+      : config.htmlTitle
     return (
-      <DocumentTitle title={`${post.title}${sectionTitle} | ${config.siteTitle}`}>
+      <DocumentTitle title={title}>
         <div className='markdown'>
           <BeamSideHeader>
             <BeamHeading>{post.title}</BeamHeading>
@@ -53,5 +70,6 @@ export default class Md extends Component {
 Md.propTypes = {
   page: PropTypes.object,
   config: PropTypes.object,
+  currentPath: PropTypes.string,
   state: PropTypes.object
 }
