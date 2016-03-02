@@ -41,8 +41,9 @@ const getRotation = (path) => {
     : (path.indexOf('/about/') !== -1)
       ? '/about/'
       : path
-  return navItems
-    .find((item) => item.path === newPath).id || 0
+  const newItem = navItems
+    .find((item) => item.path === newPath)
+  return newItem ? newItem.id : 0
 }
 
 class Template extends Component {

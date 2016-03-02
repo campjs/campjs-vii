@@ -35,7 +35,7 @@ export const navItems = [
     title: 'News'
   },
   {
-    path: '/',
+    path: 'http://tickets.campjs.com/',
     title: 'Tickets'
   }
 ]

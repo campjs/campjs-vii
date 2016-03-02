@@ -5,11 +5,10 @@ import { link } from 'gatsby-helpers'
 const Link = ({
   children,
   to,
-  href,
   ...props
 }) => {
-  if (href && !to) {
-    return <a {...props} href={href}>{children}</a>
+  if (to.indexOf('http') !== -1) {
+    return <a {...props} href={to}>{children}</a>
   }
   return (
     <RouterLink to={link(to)} {...props}>
@@ -20,8 +19,7 @@ const Link = ({
 
 Link.propTypes = {
   children: PropTypes.any,
-  to: PropTypes.string,
-  href: PropTypes.string
+  to: PropTypes.string
 }
 
 export default Link
