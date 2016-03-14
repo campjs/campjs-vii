@@ -37,6 +37,7 @@
   pointer-events: none;
   transition: transform .3s cubic-bezier(0.19, 1, 0.22, 1), opacity .3s cubic-bezier(0.19, 1, 0.22, 1);
   opacity: .26;
+  z-index: 20;
 }
 
 .Side-0--is-active .Shader-1,
@@ -52,6 +53,13 @@
 .Side-3--is-active .Shader-3,
 .Side-4--is-active .Shader-4 {
   opacity: .05;
+}
+
+.Side-1,
+.Side-2,
+.Side-3,
+.Side-4 {
+  z-index: 10;
 }
 
 @keyframes wave {

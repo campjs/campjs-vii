@@ -27,6 +27,57 @@ const BeamTopWorld = ({
               introClasses='Anim(wave)'
               background='water'/>
           }
+          {/* Fire */}
+          <Block size={[2, 1, 8]}
+            position={[75, 1, 46]}
+            background='wood'
+            currentSide={currentSide} />
+          <Block size={[8, 1, 2]}
+            position={[71, 1, 49]}
+            background='wood'
+            currentSide={currentSide} />
+          <Block size={[3, 1, 3]}
+            position={[73, 2, 48.5]}
+            background='fire'
+            currentSide={currentSide} />
+          <Block size={[2, 1, 2]}
+            position={[75, 3, 49]}
+            background='fireTop'
+            currentSide={currentSide} />
+          <Block size={[10, 2, 2]}
+            position={[70, 1, 42]}
+            background='wood'
+            currentSide={currentSide} />
+          <Block size={[2, 2, 10]}
+            position={[67, 1, 45]}
+            background='wood'
+            currentSide={currentSide} />
+          {/* Pond */}
+          <Block size={[28, 1, 15]}
+            position={[10, 1, 15]}
+            background='water'
+            currentSide={currentSide} />
+          <Block size={[12, 1, 15]}
+            position={[10, 1, 29]}
+            background='water'
+            currentSide={currentSide} />
+          <Block size={[2, 1, 2]}
+            position={[26, 2, 18]}
+            background='leaves'
+            currentSide={currentSide} />
+          <Block size={[2, 1, 2]}
+            position={[31, 2, 21]}
+            background='leaves'
+            currentSide={currentSide} />
+          {/* Small Tree */}
+          <Block size={[2, 4, 2]}
+            position={[29, 1, 37]}
+            background='wood'
+            currentSide={currentSide} />
+          <Block size={[4, 5, 4]}
+            position={[27, 4, 36]}
+            background='tree'
+            currentSide={currentSide} />
           <div title='CAMPJS'>
             {/* C */}
             <Block size={[4, 4, 5]}
@@ -118,6 +169,23 @@ const BeamTopWorld = ({
               <div className='Fz(msn1) Fz(ms1)--sm'>VII</div>
             </Block>
           </div>
+          {/* Tents */}
+          <Block size={[12, 1, 10]}
+            position={[15, 4, 58]}
+            rotate={[0, 0, 55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[8, 4, 58]}
+            rotate={[0, 0, -55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[30, 4, 72]}
+            rotate={[0, 0, 55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[23, 4, 72]}
+            rotate={[0, 0, -55]}
+            currentSide={currentSide} />
           {/* Signpost */}
           <Block size={[3, 4, 3]}
             position={[76, 1, 90]}
@@ -136,23 +204,6 @@ const BeamTopWorld = ({
           </Block>
           {isNotFirefox &&
             <div>
-              {/* Pond */}
-              <Block size={[28, 1, 15]}
-                position={[10, 1, 15]}
-                background='water'
-                currentSide={currentSide} />
-              <Block size={[12, 1, 15]}
-                position={[10, 1, 29]}
-                background='water'
-                currentSide={currentSide} />
-              <Block size={[2, 1, 2]}
-                position={[26, 2, 18]}
-                background='leaves'
-                currentSide={currentSide} />
-              <Block size={[2, 1, 2]}
-                position={[31, 2, 21]}
-                background='leaves'
-                currentSide={currentSide} />
               {/* Trees */}
               <Block size={[2, 5, 2]}
                 position={[7, 1, 18]}
@@ -169,39 +220,6 @@ const BeamTopWorld = ({
               <Block size={[4, 10, 4]}
                 position={[5, 6, 26]}
                 background='tree'
-                currentSide={currentSide} />
-              <Block size={[2, 4, 2]}
-                position={[26, 1, 37]}
-                background='wood'
-                currentSide={currentSide} />
-              <Block size={[4, 5, 4]}
-                position={[24, 4, 36]}
-                background='tree'
-                currentSide={currentSide} />
-              {/* Fire */}
-              <Block size={[2, 1, 8]}
-                position={[75, 1, 46]}
-                background='wood'
-                currentSide={currentSide} />
-              <Block size={[8, 1, 2]}
-                position={[71, 1, 49]}
-                background='wood'
-                currentSide={currentSide} />
-              <Block size={[3, 1, 3]}
-                position={[73, 2, 48.5]}
-                background='fire'
-                currentSide={currentSide} />
-              <Block size={[2, 1, 2]}
-                position={[75, 3, 49]}
-                background='fireTop'
-                currentSide={currentSide} />
-              <Block size={[10, 2, 2]}
-                position={[70, 1, 42]}
-                background='wood'
-                currentSide={currentSide} />
-              <Block size={[2, 2, 10]}
-                position={[67, 1, 45]}
-                background='wood'
                 currentSide={currentSide} />
               {/* Fire Trees */}
               <Block size={[2, 9, 2]}
@@ -228,42 +246,7 @@ const BeamTopWorld = ({
                 position={[65, 8, 34.5]}
                 background='tree'
                 currentSide={currentSide} />
-              {/* Tents */}
-              <Block size={[12, 1, 10]}
-                position={[15, 4, 58]}
-                rotate={[0, 0, 55]}
-                currentSide={currentSide} />
-              <Block size={[12, 1, 10]}
-                position={[8, 4, 58]}
-                rotate={[0, 0, -55]}
-                currentSide={currentSide} />
-              <Block size={[12, 1, 10]}
-                position={[30, 4, 72]}
-                rotate={[0, 0, 55]}
-                currentSide={currentSide} />
-              <Block size={[12, 1, 10]}
-                position={[23, 4, 72]}
-                rotate={[0, 0, -55]}
-                currentSide={currentSide} />
-              {/* Clouds */}
-              <Block size={[5, 10, 15]}
-                position={[-10, 43, 78]}
-                currentSide={currentSide} />
-              <Block size={[5, 10, 30]}
-                position={[-10, 35, 70]}
-                currentSide={currentSide} />
-              <Block size={[5, 5, 9]}
-                position={[-3, 35, 10]}
-                currentSide={currentSide} />
-              <Block size={[5, 8, 23]}
-                position={[-3, 28, 4]}
-                currentSide={currentSide} />
-              <Block size={[5, 5, 11]}
-                position={[65, 36, -40]}
-                currentSide={currentSide} />
-              <Block size={[5, 9, 27]}
-                position={[65, 28, -48]}
-                currentSide={currentSide} />
+              {/* Front right cloud */}
               <Block size={[5, 4, 11]}
                 position={[140, 36, 80]}
                 currentSide={currentSide} />
@@ -272,6 +255,25 @@ const BeamTopWorld = ({
                 currentSide={currentSide} />
             </div>
           }
+          {/* Clouds */}
+          <Block size={[5, 10, 30]}
+            position={[-10, 35, 70]}
+            currentSide={currentSide} />
+          <Block size={[5, 10, 15]}
+            position={[-10, 43, 78]}
+            currentSide={currentSide} />
+          <Block size={[5, 8, 23]}
+            position={[-3, 28, 4]}
+            currentSide={currentSide} />
+          <Block size={[5, 5, 9]}
+            position={[-3, 35, 10]}
+            currentSide={currentSide} />
+          <Block size={[5, 9, 27]}
+            position={[65, 28, -48]}
+            currentSide={currentSide} />
+          <Block size={[5, 5, 11]}
+            position={[65, 36, -40]}
+            currentSide={currentSide} />
         </div>
       </div>
     </div>

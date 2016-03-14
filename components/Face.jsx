@@ -67,11 +67,12 @@ const Face = ({
     classes.base,
     classes.side[side],
     background && backgrounds[background],
-    className
+    className,
+    'Side-' + side
   )
   return (
     <div className={stateClasses} style={faceStyle}>
-      {(side > 0 && side < 5) && isNotFirefox && (
+      {(side > 0 && side < 5) && (
         <div className={'Shader Shader-' + side} />
       )}
       {children}
