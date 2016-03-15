@@ -129,14 +129,14 @@ module.exports = {
       // Transforms
       // TranslateZ can't use percentages
       // So have to use a combination of X & Y
-      beamTop: 'rotateX(-10deg) rotateY(-45deg) scale3d(.7, .7, .7)',
+      beamTop: 'rotateX(-10deg) rotateY(-45deg) scale3d(.65, .65, .65)',
       beamFront: 'rotateX(0deg)',
       // Need .0001 for chrome bug that thinks it's not a viewable plane
       // When it's at exactly 90deg
       beamRight: 'rotateX(0deg) rotateY(-90.001deg)',
       beamBack: 'rotateX(0deg) rotateY(-180deg)',
       beamLeft: 'rotateX(0deg) rotateY(-270.001deg)',
-      beamBottom: 'rotateX(20deg) rotateY(-45deg) scale3d(.7, .7, .7)',
+      beamBottom: 'rotateX(20deg) rotateY(-45deg) scale3d(.65, .65, .65)',
       faceTop: 'rotateX(180deg) translateY(50%) RotateX(-90deg)',
       faceFront: 'rotateY(90deg) translateX(-50%) rotateY(-90deg)',
       faceRight: 'translateX(50%) rotateY(90deg)',
@@ -148,7 +148,7 @@ module.exports = {
       beamTopWorld: 'rotateY(-90deg) rotateY(-270deg)',
       beamTopScene: 'translateY(-50%) rotateX(-90deg) translateY(-50%)',
       // Perspective origin
-      prsoa: 'center -62.5rem',
+      prsoa: 'center -61.5rem',
       // Defaults
       i: 'inherit'
     },

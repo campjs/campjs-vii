@@ -31,8 +31,15 @@ if (typeof document !== 'undefined') {
 }
 
 const classes = {
-  root: 'Mih(100%)',
-  atmosphere: 'Pb(r8) Prso(prsoa) Prs(5000px) Ov(h)'
+  root: {
+    base: 'D(f) Fld(c) Mih(100%)',
+    home: 'H(100vh)'
+  },
+  atmosphere: {
+    base: 'Flx(flx1) Pb(r2) Prso(prsoa) Prs(5000px) Ov(h)',
+    notHome: 'Pt(20rem) Pb(42vw)',
+    home: ''
+  }
 }
 
 const getRotation = (path) => {
@@ -98,23 +105,29 @@ class Template extends Component {
     } = this.props
     const rotation = getRotation(state.path)
     const home = (rotation === 0)
-    const homeLinkClasses = cx(
-      'D(b) Pos(r) Z(5) Mb(-8vh)',
-      home ? 'H(48vh)' : 'H(58vh)'
+    const rootClasses = cx(
+      classes.root.base,
+      'Side-' + rotation + '--is-active',
+      home && classes.root.home
+    )
+    const atmosphereClasses = cx(
+      classes.atmosphere.base,
+      home && classes.atmosphere.home,
+      !home && classes.atmosphere.notHome
     )
     return (
-      <div className={classes.root + ' Side-' + rotation + '--is-active'}>
+      <div className={rootClasses}>
         <Icons />
         <Nav rotation={rotation} />
-        <div className={classes.atmosphere}>
-          <Link className={homeLinkClasses} to={home ? '/about/' : '/'}>
-            <div className='Hidden'>{home ? 'About' : 'Home'}</div>
-          </Link>
+        <div className={atmosphereClasses}>
           <Beam rotation={rotation}>
             <BeamFace side={0}
               background='grass'
               currentSide={rotation}>
-              <BeamTopWorld currentSide={rotation} />
+              <Link to={home ? '/about/' : '/'}>
+                <div className='Hidden'>{home ? 'About' : 'Home'}</div>
+                <BeamTopWorld currentSide={rotation} />
+              </Link>
             </BeamFace>
             <BeamFace
               side={1}
@@ -159,7 +172,7 @@ class Template extends Component {
               currentSide={rotation} />
           </Beam>
         </div>
-        <Footer />
+        <Footer rotation={rotation}/>
       </div>
     )
   }

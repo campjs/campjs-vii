@@ -71,12 +71,29 @@ const BeamTopWorld = ({
             currentSide={currentSide} />
           {/* Small Tree */}
           <Block size={[2, 4, 2]}
-            position={[29, 1, 37]}
+            position={[29, 1, 40]}
             background='wood'
             currentSide={currentSide} />
           <Block size={[4, 5, 4]}
-            position={[27, 4, 36]}
+            position={[27, 4, 39]}
             background='tree'
+            currentSide={currentSide} />
+          {/* Tents */}
+          <Block size={[12, 1, 10]}
+            position={[15, 4, 58]}
+            rotate={[0, 0, 55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[8, 4, 58]}
+            rotate={[0, 0, -55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[30, 4, 72]}
+            rotate={[0, 0, 55]}
+            currentSide={currentSide} />
+          <Block size={[12, 1, 10]}
+            position={[23, 4, 72]}
+            rotate={[0, 0, -55]}
             currentSide={currentSide} />
           <div title='CAMPJS'>
             {/* C */}
@@ -169,23 +186,6 @@ const BeamTopWorld = ({
               <div className='Fz(msn1) Fz(ms1)--sm'>VII</div>
             </Block>
           </div>
-          {/* Tents */}
-          <Block size={[12, 1, 10]}
-            position={[15, 4, 58]}
-            rotate={[0, 0, 55]}
-            currentSide={currentSide} />
-          <Block size={[12, 1, 10]}
-            position={[8, 4, 58]}
-            rotate={[0, 0, -55]}
-            currentSide={currentSide} />
-          <Block size={[12, 1, 10]}
-            position={[30, 4, 72]}
-            rotate={[0, 0, 55]}
-            currentSide={currentSide} />
-          <Block size={[12, 1, 10]}
-            position={[23, 4, 72]}
-            rotate={[0, 0, -55]}
-            currentSide={currentSide} />
           {/* Signpost */}
           <Block size={[3, 4, 3]}
             position={[76, 1, 90]}

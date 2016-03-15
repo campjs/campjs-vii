@@ -2,7 +2,8 @@ import React, { PropTypes } from 'react'
 import cx from 'classnames'
 
 const classes = {
-  base: 'Trs(eoel) Pos(r) Trfs(p) W(93vw) Maw(37.5rem) Mx(a)',
+  base: 'Trs(eoel) Pos(r) Trfs(p) W(90vw) Maw(37.5rem) Mx(a)',
+  home: 'H(100vh) Pt(55vh) Pt(62vh)--md',
   rotation: [
     'Trf(beamTop)',
     'Trf(beamFront)',
@@ -23,6 +24,7 @@ const Beam = ({
   const stateClasses = cx(
     classes.base,
     classes.rotation[rotation],
+    rotation === 0 && classes.home,
     className
   )
   return (
