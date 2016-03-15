@@ -124,13 +124,18 @@ class Template extends Component {
             <BeamFace side={0}
               background='grass'
               currentSide={rotation}>
-              <Link to={home ? '/about/' : '/'}>
-                <div className='Hidden'>{home ? 'About' : 'Home'}</div>
-                <BeamTopWorld currentSide={rotation} />
-              </Link>
+              <BeamTopWorld currentSide={rotation} />
             </BeamFace>
             <BeamFace
               side={1}
+              currentSide={rotation}>
+              {/\/news\/\w+/.test(state.path)
+                ? <RouteHandler {...this.props} />
+                : <NewsIndex pages={pages}/>
+              }
+            </BeamFace>
+            <BeamFace
+              side={2}
               currentSide={rotation}>
               {/\/about\/\w+/.test(state.path)
                 ? <RouteHandler {...this.props} />
@@ -138,7 +143,7 @@ class Template extends Component {
               }
             </BeamFace>
             <BeamFace
-              side={2}
+              side={3}
               currentSide={rotation}>
               <Page
                 currentPath={page.path}
@@ -149,7 +154,7 @@ class Template extends Component {
                 }}/>
             </BeamFace>
             <BeamFace
-              side={3}
+              side={4}
               currentSide={rotation}>
               <Page
                 currentPath={page.path}
@@ -158,14 +163,6 @@ class Template extends Component {
                   page: pages.find((page) =>
                     page.requirePath === 'get-involved/index.md')
                 }}/>
-            </BeamFace>
-            <BeamFace
-              side={4}
-              currentSide={rotation}>
-              {/\/news\/\w+/.test(state.path)
-                ? <RouteHandler {...this.props} />
-                : <NewsIndex pages={pages}/>
-              }
             </BeamFace>
             <BeamFace
               side={5}

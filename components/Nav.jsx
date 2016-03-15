@@ -16,23 +16,23 @@ const classes = {
 export const navItems = [
   {
     id: 1,
+    path: '/news/',
+    title: 'News'
+  },
+  {
+    id: 2,
     path: '/about/',
     title: 'About'
   },
   {
-    id: 2,
+    id: 3,
     path: '/schedule/',
     title: 'Schedule'
   },
   {
-    id: 3,
+    id: 4,
     path: '/get-involved/',
     title: 'Get Involved'
-  },
-  {
-    id: 4,
-    path: '/news/',
-    title: 'News'
   },
   {
     path: 'http://tickets.campjs.com/',
