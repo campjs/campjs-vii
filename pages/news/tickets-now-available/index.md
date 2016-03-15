@@ -1,10 +1,12 @@
 ---
 title: 'Tickets Now Available'
-date: "2016-02-28T22:12:03.284Z"
+date: "2016-03-17T11:12:03.284Z"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.
+[Tickets are now available](http://tickets.campjs.com/) for CampJS VII. Expect
+more details to come out over the next month, including a call for speakers.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis luctus nisi et eros bibendum lacinia. Curabitur sed est nec urna pretium vulputate ut eget lectus. In ultricies, tellus non vehicula malesuada, augue sem aliquet tellus, ut faucibus turpis ante quis nibh. Ut vel turpis tortor, a consectetur ipsum. Sed posuere commodo vestibulum. Pellentesque volutpat diam sem.
+You can keep [track of the event on Lanyrd](http://lanyrd.com/2016/campjsnews/),
+or join us on the [#campjs](https://viewsource.slack.com/archives/campjs)
+channel on the [View Source Slack](https://viewsource.slack.com/archives/campjs)
+to discuss all things CampJS.

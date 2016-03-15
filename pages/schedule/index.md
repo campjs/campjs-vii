@@ -2,6 +2,5 @@
 title: Schedule
 ---
 
-Coming soon.
-
-Got an idea for a talk or workshop? [Get in touch](https://github.com/campjs/campjs-vii/issues).
+A call for speakers will be announced soon.
+Follow [@campjsnews on Twitter](https://twitter.com/campjsnews) for updates.

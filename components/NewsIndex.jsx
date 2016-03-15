@@ -7,6 +7,7 @@ import {
   Link
 } from './'
 
+var escapeRegex = /(<([^>]+)>)/ig
 const classes = {
   root: '',
   body: 'P(r1)'
@@ -28,13 +29,14 @@ const NewsIndex = ({
             const pEnd = page.data.body.indexOf('</p>') - pStart
             const teaser = page.data.teaser ||
               page.data.body.substr(pStart, pEnd)
+            const escapedTeaser = teaser.replace(escapeRegex, '')
             return (
               <div key={key} className='Mb(r2)'>
                 <Heading level={2} className='Fz(ms2)'>
                   <Link className='Link' to={page.path}>{page.data.title}</Link>
                 </Heading>
                 <div className='Fz(msn1) Tt(u) Op(.6) Mb(rh)'>{moment(page.data.date).format('MMMM D, YYYY')}</div>
-                <p className='Mb(rh)'>{teaser}</p>
+                <p className='Mb(rh)'>{escapedTeaser}</p>
                 <p><Link className='Link Fz(msn1)' to={page.path}>Read more</Link></p>
               </div>
             )

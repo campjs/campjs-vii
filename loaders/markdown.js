@@ -34,6 +34,9 @@ renderer.code = function (code, lang) {
 }
 
 renderer.paragraph = function (text) {
+  if (text.indexOf('!') === 0) {
+    return `<p class='Mb(r1) Fz(ms1)'>${text.replace('!', '')}</p>`
+  }
   return `<p class='Mb(r1)'>${text}</p>`
 }
 

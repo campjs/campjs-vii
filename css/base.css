@@ -51,11 +51,9 @@ img {
 }
 
 hr {
-  opacity: .3;
-  width: 3rem;
-  border-top: .375rem solid;
+  border-top: .75rem solid rgba(255,255,255,.2);
   border-bottom: none;
-  margin: 2.25rem 0;
+  margin: 1.5rem 0;
 }
 
 button::-moz-focus-inner,
