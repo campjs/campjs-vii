@@ -3,7 +3,7 @@ import Face from './Face'
 import cx from 'classnames'
 
 const classes = {
-  base: 'Trfs(p) Pe(n) Pos(a) B(0) L(0) Trs(eoel)',
+  base: 'Trfs(p) Pos(a) B(0) L(0) Trs(eoel)',
   hide: 'Op(0)'
 }
 

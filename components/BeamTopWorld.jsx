@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react'
 import {
-  Block
+  Block,
+  Link
 } from './'
 import { isNotFirefox } from '../utils'
 
@@ -14,6 +15,7 @@ const classes = {
 const BeamTopWorld = ({
   currentSide
 }) => {
+  const home = currentSide === 0
   return (
     <div className={classes.base}>
       <div className={classes.scene}>
@@ -95,7 +97,7 @@ const BeamTopWorld = ({
             position={[23, 4, 72]}
             rotate={[0, 0, -55]}
             currentSide={currentSide} />
-          <div title='CAMPJS'>
+          <Link to={home ? '/news/' : '/'} title='CAMPJS'>
             {/* C */}
             <Block size={[4, 4, 5]}
               position={[11, 4, 1]}
@@ -185,7 +187,7 @@ const BeamTopWorld = ({
               currentSide={currentSide}>
               <div className='Fz(msn1) Fz(ms1)--sm'>VII</div>
             </Block>
-          </div>
+          </Link>
           {/* Signpost */}
           <Block size={[3, 4, 3]}
             position={[76, 1, 90]}
@@ -195,12 +197,16 @@ const BeamTopWorld = ({
             position={[59, 5, 89]}
             background='sand'
             currentSide={currentSide}>
-            <div className='Lts(-0.01em) P(re) P(rq)--sm W(100%) H(100%) Bds(s) Bgc(dirt) Bdw(re) Bdw(rq)--sm Bdc(sand)'>
-              <div className='H(100%) D(f) Ai(c) Jc(c) Fld(c) Ta(c) Fz(msn2) Fz(msn1)--osm Fz(ms0)--osmd Fz(ms1)--md'>
-                <div>3-6 June, 2016</div>
-                <div className='Fz(.75em) Op(.75)'>Broken Bay, Sydney</div>
+            <Link to='/about/'
+              className='signpost Bgc(dirt):h Lts(-0.01em) P(re) P(rq)--sm W(100%) H(100%) Bds(s) Bgc(dirt) Bdw(re) Bdw(rq)--sm Bdc(sand)'>
+              <div className='H(100%) D(f) Ai(c) Jc(c) Ta(c) Fz(msn2) Fz(msn1)--osm Fz(ms0)--osmd Fz(ms1)--md'>
+                <div className='Ai(c) Jc(c) Fld(c)'>
+                  <div>3-6 June, 2016</div>
+                  <div className='Fz(.75em) Op(.75)'>Broken Bay, Sydney</div>
+                </div>
+                <div className='Pstart(rh) Op(0) Trs(aeo) Mstart(-1em) W(1em) signpost:h_Op(1) signpost:h_Mstart(0) Fz(ms2)'>></div>
               </div>
-            </div>
+            </Link>
           </Block>
           {isNotFirefox &&
             <div>
