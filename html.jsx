@@ -6,7 +6,6 @@ export default class Html extends React.Component {
   render () {
     const {
       body,
-      favicon,
       title
     } = this.props
     const pageTitle = title || DocumentTitle.rewind()
@@ -20,7 +19,7 @@ export default class Html extends React.Component {
           <title>
             {pageTitle}
           </title>
-          <link rel='shortcut icon' href={favicon} />
+          <link rel='shortcut icon' href='/favicon.ico' />
         </head>
         <body className='Miw(300px) M(0) Ff(mono) C(#fff.9) Lts(-0.003em) Wds(-0.1em)'>
           <div id='react-mount' className='Bgc(sky) Bgi(grddarkt)' dangerouslySetInnerHTML={{__html: body}} />
@@ -33,7 +32,6 @@ export default class Html extends React.Component {
 
 Html.propTypes = {
   body: PropTypes.string,
-  favicon: PropTypes.string,
   title: PropTypes.string
 }
 
