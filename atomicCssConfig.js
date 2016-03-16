@@ -55,7 +55,7 @@ module.exports = {
       leaves: '#0a6',
       tree: '#91cc00',
       fire: '#fd9700',
-      fireTop: '#fdd600',
+      fireBright: '#fdd600',
 
       darkest: 'hsl(188, 28%, 12%)',
       dark: 'hsl(188, 42%, 18%)',
@@ -126,6 +126,8 @@ module.exports = {
       aeob: 'all .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
       // Animations
       wave: '5s ease-in-out 1s alternate infinite wave',
+      fireTop: '3s ease-in-out 1s infinite fireTop',
+      fireBottom: '3s ease-in-out 1s infinite fireBottom',
       // Transforms
       // TranslateZ can't use percentages
       // So have to use a combination of X & Y

@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react'
 import cx from 'classnames'
-import { isNotFirefox } from '../utils'
 
 export const backgrounds = {
   dirt: 'Bgc(dirt)',
@@ -12,7 +11,7 @@ export const backgrounds = {
   sand: 'Bgc(sand)',
   wood: 'Bgc(wood)',
   fire: 'Bgc(fire)',
-  fireTop: 'Bgc(fireTop)'
+  fireBright: 'Bgc(fireBright)'
 }
 
 const classes = {

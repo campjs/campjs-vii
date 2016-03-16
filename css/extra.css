@@ -73,3 +73,36 @@
     transform: translateX(-50.125%) translateY(400%) rotateX(88deg) translateY(-100%) rotateX(-90deg);
   }
 }
+
+@keyframes fireBottom {
+  0%, 60%, 100% {
+    transform: translateX(2400%) translateY(-100%) rotateX(90deg) translateY(4900%) rotateX(-90deg) scale3d(1.1, 1, 1.1);
+  }
+  15% {
+    transform: translateX(2400%) translateY(-100%) rotateX(90deg) translateY(4900%) rotateX(-90deg) scale3d(.9, 1, .9);
+  }
+  30% {
+    transform: translateX(2400%) translateY(-100%) rotateX(90deg) translateY(4900%) rotateX(-90deg) scale3d(1.4, 1, 1.4);
+  }
+}
+
+@keyframes fireTop {
+  0%, 100% {
+    transform: translateX(3700%) translateY(-200%) rotateX(90deg) translateY(4900%) rotateX(-90deg);
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(3700%) translateY(-200%) rotateX(90deg) translateY(4900%) rotateX(-90deg) scale3d(.8, 1, .8);
+  }
+  50% {
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(3700%) translateY(-400%) rotateX(90deg) translateY(4900%) rotateX(-90deg) scale3d(1.5, 1, 1.5);
+    opacity: 0;
+  }
+  96% {
+    transform: translateX(3700%) translateY(-150%) rotateX(90deg) translateY(4900%) rotateX(-90deg);
+    opacity: 0;
+  }
+}
