@@ -87,11 +87,11 @@
 }
 
 @keyframes fireTop {
-  0%, 100% {
+  0%,  100% {
     transform: translateX(3700%) translateY(-200%) rotateX(90deg) translateY(4900%) rotateX(-90deg);
     opacity: 1;
   }
-  20% {
+  30% {
     transform: translateX(3700%) translateY(-200%) rotateX(90deg) translateY(4900%) rotateX(-90deg) scale3d(.8, 1, .8);
   }
   50% {

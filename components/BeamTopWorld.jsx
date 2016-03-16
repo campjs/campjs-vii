@@ -43,6 +43,7 @@ const BeamTopWorld = ({
               currentSide={currentSide}
               postionAfterIntro={[-400, -100, -400]}
               hideAfterIntro
+              className='Pe(n)'
               introClasses='Anim(wave)'
               background='water'/>
           }
