@@ -5,6 +5,23 @@ import {
 } from './'
 import { isNotFirefox } from '../utils'
 
+var isChromium
+var vendorName
+var isOpera
+var isIEedge
+var isChrome
+
+if (typeof document !== 'undefined') {
+  isChromium = window.chrome
+  vendorName = window.navigator.vendor
+  isOpera = window.navigator.userAgent.indexOf('OPR') > -1
+  isIEedge = window.navigator.userAgent.indexOf('Edge') > -1
+  isChrome = (isChromium !== null && isChromium !== undefined &&
+    vendorName === 'Google Inc.' && isOpera === false && isIEedge === false)
+} else {
+  isChrome = false
+}
+
 const classes = {
   base: 'Trfs(p) Pos(a) W(100%) T(0) L(0) H(0) Mt(-50%) Pt(100%) Bgc(grass)' +
     ' Trf(beamTopWorld)',
@@ -43,17 +60,17 @@ const BeamTopWorld = ({
             background='wood'
             currentSide={currentSide} />
           <Block size={[2, 2, 10]}
-            position={[66, 1, 48]}
+            position={[67, 1, 47]}
             background='wood'
             currentSide={currentSide} />
           <Block size={[3, 1, 3]}
             position={[73, 2, 48.5]}
             background='fire'
-            className='Anim(fireBottom)'
+            className={isChrome && 'Anim(fireBottom)'}
             currentSide={currentSide} />
           <Block size={[2, 1, 2]}
             position={[75, 3, 49]}
-            className='Anim(fireTop)'
+            className={isChrome && 'Anim(fireTop)'}
             background='fireBright'
             currentSide={currentSide} />
           {/* Pond */}
