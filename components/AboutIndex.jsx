@@ -22,7 +22,7 @@ const AboutIndex = ({
         <BeamHeading>About</BeamHeading>
       </BeamSideHeader>
       <div className={classes.body}>
-        <p className='Fz(ms1) Mb(r1)'>CampJS is for everyone who is interested in web technology. Beginners & experts, <strong>all are welcome</strong>.</p>
+        <p className='Fz(ms1) Mb(r1)'>CampJS is for anyone who is interested in web technology. Beginners & experts, <strong>all are welcome</strong>.</p>
         <hr />
         <p className='Mb(r1)'>Networking with other developers is arguably the most valuable aspect of a conference, yet it's often a hurried and fleeting affair that happens in-between the schedule of a regular conference - but CampJS isn't a regular conference. This weekend-long retreat allows everyone enough time to learn new things, relax and most importantly: create real friendships and connections.</p>
         <p className='Mb(r1)'>CampJS creates a unique blend of expert-led, structured content and self-directed, unstructured learning. Some content is scheduled, but the main area is reserved for hacking. The final night is reserved for demos for people to show off what they have built or learned at the event.</p>
