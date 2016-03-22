@@ -139,7 +139,7 @@ class Template extends Component {
               currentSide={rotation}>
               {/\/about\/\w+/.test(state.path)
                 ? <RouteHandler {...this.props} />
-                : <AboutIndex pages={pages}/>
+              : <AboutIndex pages={pages} active={rotation === 2} />
               }
             </BeamFace>
             <BeamFace
