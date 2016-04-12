@@ -21,7 +21,6 @@ const AboutIndex = ({
   children,
   pages
 }) => {
-  console.log(active)
   const bodyClasses = cx(
     classes.body.base,
     !active && classes.body.inactive
