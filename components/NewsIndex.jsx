@@ -23,8 +23,11 @@ const NewsIndex = ({
         <BeamHeading>News</BeamHeading>
       </BeamSideHeader>
       <div className={classes.body}>
-        {pages.map((page, key) => {
-          if (page.data && (page.path.indexOf('/news/') !== -1)) {
+        {pages
+          .filter((page) => page.data && (page.path.indexOf('/news/') !== -1))
+          .sort((prevPage, currentPage) =>
+            moment(currentPage.data.date).isAfter(prevPage.data.date))
+          .map((page, key) => {
             const pStart = page.data.body.indexOf('>') + 1
             const pEnd = page.data.body.indexOf('</p>') - pStart
             const teaser = page.data.teaser ||
@@ -41,7 +44,7 @@ const NewsIndex = ({
               </div>
             )
           }
-        })}
+        )}
         {children}
       </div>
     </div>
