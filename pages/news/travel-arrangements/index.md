@@ -14,7 +14,8 @@ This link [http://goo.gl/xpucJE](http://goo.gl/xpucJE) shows the trip for a diff
 - Domestic Airport Station -> Central Station (switch to Central Coast & Newcastle Line) -> Hawkesbury River Station
 - It is then ~100m walk to Brooklyn Wharf
 - Ferries will leave Brooklyn Wharf at 2:00PM and 5:00PM
-- The ferry times for the return trip are yet to be finalised but booking flights leaving Sydney after 2:00PM should allow plenty of time.
+- ~~The ferry times for the return trip are yet to be finalised but booking flights leaving Sydney after 2:00PM should allow plenty of time.~~
+- Ferries for the return trip have been confirmed as leaving Broken Bay at 8am and 10am Monday
 
 ## Reminder
 
