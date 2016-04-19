@@ -3,7 +3,7 @@ import cx from 'classnames'
 import { Link } from './'
 
 const classes = {
-  base: 'D(ib) Mb(r1) Px(r3q) Py(rq) Fw(700) C(#fff) Bxsh(sh1) Bxsh(sh2):h Bxsh(sh2):f Bxsh(sh1):a',
+  base: 'D(ib) Px(r3q) Py(rq) Fw(700) C(#fff) Bxsh(sh1) Bxsh(sh2):h Bxsh(sh2):f Bxsh(sh1):a',
   type: {
     primary: 'Bgc(tree)',
     secondary: 'Bgc(sky)'
