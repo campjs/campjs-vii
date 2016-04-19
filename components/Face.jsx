@@ -15,7 +15,7 @@ export const backgrounds = {
 }
 
 const classes = {
-  base: 'Pos(a) Ov(h) Bfv(h) Trfs(p) Ff(bit)',
+  base: 'Pos(a) Ov(h) Bfv(h) Trfs(p) Ff(bit) D(f) Ai(c) Jc(c)',
   side: [
     'Trf(faceTop) W(100%)',
     'StretchedBox D(f) Ai(c) Jc(c)',

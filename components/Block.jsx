@@ -44,6 +44,7 @@ const Block = ({
   hideAfterIntro,
   background = 'plain',
   currentSide = 0,
+  childSide = 'front',
   children,
   introClasses,
   className
@@ -69,11 +70,13 @@ const Block = ({
       <Face side={1}
         size={size}
         background={background}>
-        {children}
+        {childSide === 'front' && children}
       </Face>
       <Face side={2}
         size={size}
-        background={background} />
+        background={background}>
+        {childSide === 'right' && children}
+      </Face>
       <Face side={3}
         size={size}
         background={background} />
@@ -89,6 +92,7 @@ const Block = ({
 
 Block.propTypes = {
   children: PropTypes.any,
+  childSide: PropTypes.oneOf(['front', 'right']),
   className: PropTypes.string,
   /**
    * Postion is based on x, y, z coordinates
