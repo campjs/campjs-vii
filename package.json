@@ -4,10 +4,11 @@
   "description": "The website for CampJS VII",
   "main": "app.js",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run get-schedule && gatsby build",
     "publish": "npm run build && npm run push",
+    "get-schedule": "curl -s http://lanyrd.com/2016/campjs-vii/schedule/f5c33f7018106b04.v1.json > sessions.json",
     "push": "node publish.js",
-    "start": "gatsby develop",
+    "start": "npm run get-schedule && gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

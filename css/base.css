@@ -76,6 +76,18 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+button {
+  background-color: inherit;
+  color: inherit;
+  border: 0;
+  appearance: none;
+  font-family: inherit;
+  font-size: inherit;
+  padding: 0;
+  cursor: pointer;
+  outline: 0;
+}
+
 ol,
 ul {
   list-style: none;

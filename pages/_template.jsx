@@ -11,7 +11,8 @@ import {
   Footer,
   Link,
   Nav,
-  NewsIndex
+  NewsIndex,
+  ScheduleIndex
 } from '../components'
 import { navItems } from '../components/Nav'
 
@@ -145,13 +146,11 @@ class Template extends Component {
             <BeamFace
               side={3}
               currentSide={rotation}>
-              <Page
-                currentPath={page.path}
-                {...{
-                  ...this.props,
-                  page: pages.find((page) =>
-                    page.requirePath === 'schedule/index.md')
-                }}/>
+              {/\/schedule\/\w+/.test(state.path)
+                ? <RouteHandler {...this.props} />
+                : (<ScheduleIndex />
+                )
+              }
             </BeamFace>
             <BeamFace
               side={4}

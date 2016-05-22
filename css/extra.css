@@ -2,7 +2,8 @@
   word-spacing: -0.1em;
 }
 
-.Link {
+.Link,
+.Details a {
   text-decoration: none;
   background-image: linear-gradient(to bottom, currentColor 50%, currentColor 50%);
   background-repeat: repeat-x;
@@ -11,19 +12,23 @@
 }
 
 @media not all, only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
-  .Link {
+  .Link,
+  .Details a {
     background-size: 1px 1px;
   }
 }
 
 .Link:hover,
-.Link:focus {
+.Link:focus,
+.Details a:hover,
+.Details a:focus {
   opacity: .6;
   background-image: linear-gradient(to bottom, transparent 50%, transparent 50%);
   background-position: 0 1.25em;
 }
 
-.Link:active {
+.Link:active,
+.Details a:active {
   opacity: 1;
 }
 
@@ -60,6 +65,10 @@
 .Side-3,
 .Side-4 {
   z-index: 10;
+}
+
+.Details > * + p {
+  margin-top: 1.5rem;
 }
 
 @keyframes wave {
