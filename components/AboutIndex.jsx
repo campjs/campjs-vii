@@ -47,10 +47,27 @@ const AboutIndex = ({
         <p className='Mb(r1)'>Networking with other developers is arguably the most valuable aspect of a conference, yet it's often a hurried and fleeting affair that happens in-between the schedule of a regular conference - but CampJS isn't a regular conference. This weekend-long retreat allows everyone enough time to learn new things, relax and most importantly: create real friendships and connections.</p>
         <p className='Mb(r1)'>CampJS creates a unique blend of expert-led, structured content and self-directed, unstructured learning. Some content is scheduled, but the main area is reserved for hacking. The final night is reserved for demos for people to show off what they have built or learned at the event.</p>
         <Heading level={2} className='Fz(ms1) Mt(r2) Mb(rh)'>When/Where</Heading>
-        <p className='Mb(r1)'>
+        <p>
           CampJS VII will commence from Friday afternoon on the 3rd of June, and run through to Monday morning the 6th.
-          The Camp will be held at <Link className='Link' to='https://sportandrecreation.nsw.gov.au/facilities/brokenbay/tour'>Broken Bay</Link>, Sydney on the Hawkesbury River.
+          The Camp will be held at <Link className='Link' to='https://sportandrecreation.nsw.gov.au/facilities/brokenbay/tour'>Broken Bay</Link>, Sydney on the Hawkesbury River. Find out <Link to='/about/transport/' className='Link'>more about transport</Link>.
         </p>
+        <Heading level={2} className='Fz(ms1) Mt(r2) Mb(rh)'>What To Bring</Heading>
+        <ul className='List(d) Mstart(r1) Mb(r2)'>
+          <li>Earplugs</li>
+          <li>Warm Clothes</li>
+          <li>Sleeping Bag + Pillow</li>
+          <li>Beer / Cider / Wine</li>
+          <li>Bathroom Equipment</li>
+          <li>Snacks to Share</li>
+          <li>Computer, Phone &amp; Associated Chargers</li>
+          <li>Board/Card Games</li>
+          <li>Headphones</li>
+          <li>Instruments</li>
+          <li>Medications</li>
+          <li>Warm Clothes & Earplugs</li>
+          <li>Good Attitude</li>
+          <li>Anything else you need to survive the weekend</li>
+        </ul>
         <p>
           <LinkButton to='http://tickets.campjs.com/' className='Mend(r1)'>Get Tickets!</LinkButton>
           <LinkButton to='http://lanyrd.com/2016/campjsnews/' type='secondary'>Track CampJS on Lanyrd</LinkButton>
