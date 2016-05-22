@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import cx from 'classnames'
 import { Link } from './'
+import { escapeHtml } from '../utils'
 
 const classes = {
   times: 'D(f) Tt(u) Ff(bit) Fz(msn1) Fw(600) Px(rq) Lh(r1) Mb(rh)',
@@ -43,6 +44,7 @@ class Session extends Component {
       classes.times,
       classes.spaces[space]
     )
+    const bio = escapeHtml(speaker.bio)
     return (
       <div {...props}>
         <h3 className={timesClasses}>
@@ -55,9 +57,11 @@ class Session extends Component {
             {speaker &&
               <div className='Mb(rq)'>
                 <span>{speaker.name} </span>
-                <Link className='Link' to={'https://twitter.com/' + speaker.twitter}>
-                  {speaker.twitter}
-                </Link>
+                {speaker.twitter &&
+                  (<Link className='Link' to={'https://twitter.com/' + speaker.twitter.substr(1)}>
+                    {speaker.twitter}
+                  </Link>)
+                }
               </div>
             }
             <button
@@ -74,9 +78,14 @@ class Session extends Component {
                 className='Bdtw(1px) Bdts(s) Mt(rh) Pt(rh) Details'/>
             }
           </div>
-          {speaker &&
+          {speaker && speaker.twitter &&
+            <Link to={'https://twitter.com/' + speaker.twitter.substr(1)} className='Flxs(0) Mend(rh)'>
+              <img src={speaker.image_75} alt={speaker.twitter} title={bio} />
+            </Link>
+          }
+          {speaker && !speaker.twitter &&
             <div className='Flxs(0) Mend(rh)'>
-              <img src={speaker.image_75} alt={speaker.twitter} title={speaker.bio} />
+              <img src={speaker.image_75} alt={speaker.twitter} title={bio} />
             </div>
           }
         </div>

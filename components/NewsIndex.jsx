@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react'
 import moment from 'moment'
+import { escapeHtml } from '../utils'
 import {
   BeamSideHeader,
   BeamHeading,
@@ -7,7 +8,6 @@ import {
   Link
 } from './'
 
-var escapeRegex = /(<([^>]+)>)/ig
 const classes = {
   root: '',
   body: 'P(r1)'
@@ -32,7 +32,7 @@ const NewsIndex = ({
             const pEnd = page.data.body.indexOf('</p>') - pStart
             const teaser = page.data.teaser ||
               page.data.body.substr(pStart, pEnd)
-            const escapedTeaser = teaser.replace(escapeRegex, '')
+            const escapedTeaser = escapeHtml(teaser)
             return (
               <div key={key} className='Mb(r2)'>
                 <Heading level={2} className='Fz(ms2)'>

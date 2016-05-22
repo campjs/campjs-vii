@@ -41,7 +41,6 @@ class ScheduleIndex extends Component {
     const days = scheduleData.sessions
     const activeDaySessions = days[activeDay].sessions
     const dayButtonClasses = 'P(rq) Mend(rq) Bgc(#fff.2):h'
-    console.log(activeDaySessions)
     return (
       <div>
         <BeamSideHeader>
