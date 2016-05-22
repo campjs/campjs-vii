@@ -13,5 +13,4 @@ always plenty to help with. If you want to help in any way (or just get in on
 ## Sponsorship
 
 If you are interesting in sponsoring, there are a number of packages available.
-More details will be coming out soon, in the mean time contact
-[damon@campjs.com](mailto:damon@campjs.com) with any enquiries.
+Contact [damon@campjs.com](mailto:damon@campjs.com) with any enquiries.
