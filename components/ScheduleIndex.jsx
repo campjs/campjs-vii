@@ -5,22 +5,20 @@ import {
   BeamSideHeader,
   BeamHeading,
   Heading,
-  Link,
-  LinkButton,
   Session
 } from './'
 
 const simplifyDay = (day) => (
-  day.substr(0, 3) + day.substr(day.length - 9)
+  day.substr(0, 3) + day.substr(day.length - 9, 4)
 )
 
 class ScheduleIndex extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     const today = new Date()
     const isItSunday = (today.getDate() === 5) && (today.getMonth() === 5)
     this.state = {
-      activeDay: isItSunday ? 1 : 0
+      activeDay: isItSunday ? 2 : 1
     }
     this.handleSwitchDay = this.handleSwitchDay.bind(this)
   }

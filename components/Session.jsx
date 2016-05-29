@@ -7,14 +7,15 @@ const classes = {
   times: 'D(f) Tt(u) Ff(bit) Fz(msn1) Fw(600) Px(rq) Lh(r1) Mb(rh)',
   spaces: {
     'Gymnasium': 'Bgc(sky)',
-    'Workshop Area': 'Bgc(tree)'
+    'Workshop Area': 'Bgc(tree)',
+    'Dining Hall': 'Bgc(sand) C(dirt)'
   },
   session: 'D(f) Fld(rr) Mb(r1)',
   title: 'Fw(600) Fz(ms1) Lh(1.2) Mb(rq)'
 }
 
 class Session extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       showDetails: false
@@ -29,8 +30,6 @@ class Session extends Component {
   render () {
     const {
       abstract,
-      children,
-      className,
       title,
       times,
       speaker,
@@ -42,13 +41,13 @@ class Session extends Component {
     } = this.state
     const timesClasses = cx(
       classes.times,
-      classes.spaces[space]
+      classes.spaces[space] || 'Bgc(#fff) C(dirt)'
     )
-    const bio = escapeHtml(speaker.bio)
+    const bio = speaker ? escapeHtml(speaker.bio) : ''
     return (
       <div {...props}>
         <h3 className={timesClasses}>
-          <span>{times || 'Time not specified'}</span>
+          <span>{times.replace(':00', '') || 'Time not specified'}</span>
           <span className='Mstart(a)'>{space}</span>
         </h3>
         <div className={classes.session}>
@@ -64,18 +63,22 @@ class Session extends Component {
                 }
               </div>
             }
-            <button
-              onClick={this.handleShowDetails}
-              className='D(f) W(100%)'>
-              <span className={showDetails ? 'Fw(600)' : 'Link'}>
-                Details
-                {!showDetails && (<span className='Pstart(rq)'>></span>) }
-              </span>
-              {showDetails && (<span className='Mstart(a) Link'>Hide x</span>) }
-            </button>
-            {showDetails &&
-              <div dangerouslySetInnerHTML={{__html: abstract}}
-                className='Bdtw(1px) Bdts(s) Mt(rh) Pt(rh) Details'/>
+            {abstract &&
+              (<div>
+                <button
+                  onClick={this.handleShowDetails}
+                  className='D(f) W(100%)'>
+                  <span className={showDetails ? 'Fw(600)' : 'Link'}>
+                    Details
+                    {!showDetails && (<span className='Pstart(rq)'>></span>)}
+                  </span>
+                  {showDetails && (<span className='Mstart(a) Link'>Hide x</span>)}
+                </button>
+                {showDetails &&
+                  <div dangerouslySetInnerHTML={{__html: abstract}}
+                    className='Bdtw(1px) Bdts(s) Mt(rh) Pt(rh) Details'/>
+                }
+              </div>)
             }
           </div>
           {speaker && speaker.twitter &&
@@ -96,8 +99,6 @@ class Session extends Component {
 
 Session.propTypes = {
   abstract: PropTypes.string,
-  children: PropTypes.any,
-  className: PropTypes.string,
   title: PropTypes.string,
   times: PropTypes.string,
   speaker: PropTypes.object,
