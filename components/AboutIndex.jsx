@@ -104,6 +104,14 @@ const AboutIndex = ({
               </svg>
             </a>
           </div>
+          <div className='W(1/2) W(1/3)--lg'>
+            <a href='https://automattic.com' className='Op(.75):h Op(.75):f Op(.5):a'>
+              <svg className='Fill(#fff) W(100%) H(r2) P(rh)'>
+                <use xlinkHref='#automattic'/>
+                <title>Automattic</title>
+              </svg>
+            </a>
+          </div>
         </div>
         <div className='D(f) Flw(w) Ai(c) Mx(nrh) Mb(rh)'>
           <div className='W(1/3) W(1/4)--lg'>
