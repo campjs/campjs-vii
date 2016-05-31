@@ -54,18 +54,23 @@ const AboutIndex = ({
         <Heading level={2} className='Fz(ms1) Mt(r2) Mb(rh)'>What To Bring</Heading>
         <ul className='List(d) Mstart(r1) Mb(r2)'>
           <li>Earplugs</li>
-          <li>Warm Clothes</li>
-          <li>Sleeping Bag + Pillow</li>
-          <li>Beer / Cider / Wine</li>
-          <li>Bathroom Equipment</li>
-          <li>Snacks to Share</li>
-          <li>Computer, Phone &amp; Associated Chargers</li>
+          <li>Pillow</li>
+          <li>Sleeping Bag or doona and two single flat sheets</li>
+          <li>Toiletries including soap</li>
+          <li>Towel(s)</li>
+          <li>Computer (<Link to='https://gist.github.com/DamonOehlman/19b4025d08c93d0c890c2c33339ae262' className='Link'>Prepared for offline use</Link>)</li>
+          <li>Phone</li>
+          <li>Associated Chargers for the above items</li>
+          <li>Enough clothing for your stay, including 3 layers of warm clothing</li>
+          <li>Sunscreen, sunglasses and hat</li>
+          <li>Insect repellent</li>
           <li>Board/Card Games</li>
           <li>Headphones</li>
           <li>Instruments</li>
           <li>Medications</li>
-          <li>Warm Clothes & Earplugs</li>
-          <li>Good Attitude</li>
+          <li>Snacks to Share</li>
+          <li>Additional Alchohol (Some beer and cider provided)</li>
+          <li>A <Link to='/about/code-of-conduct/' className='Link'>Good Attitude</Link></li>
           <li>Anything else you need to survive the weekend</li>
         </ul>
         <p>
