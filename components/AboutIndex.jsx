@@ -74,7 +74,6 @@ const AboutIndex = ({
           <li>Anything else you need to survive the weekend</li>
         </ul>
         <p>
-          <LinkButton to='http://tickets.campjs.com/' className='Mend(r1)'>Get Tickets!</LinkButton>
           <LinkButton to='http://lanyrd.com/2016/campjsnews/' type='secondary'>Track CampJS on Lanyrd</LinkButton>
         </p>
         <Heading level={2} className='Fz(ms1) Mt(r2) Mb(rh)'>Sponsors</Heading>

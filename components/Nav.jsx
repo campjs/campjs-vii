@@ -33,10 +33,6 @@ export const navItems = [
     id: 4,
     path: '/get-involved/',
     title: 'Get Involved'
-  },
-  {
-    path: 'http://tickets.campjs.com/',
-    title: 'Tickets'
   }
 ]
 
